@@ -19,6 +19,10 @@ export function toLowerAll(str) {
   return str.toLowerCase()
 }
 
+export function convertPath(pathStr){
+  return pathStr.replace(/\\/g, '/').replace('//','/')
+}
+
 export function copyTplFileList(generator, scanPath
   , destinationPath,  extensionConfig, exclude=[]) {
   const destPath = destinationPath.length>0?destinationPath+'/':''
@@ -36,7 +40,7 @@ export function copyTplFileList(generator, scanPath
 }
 
 export function copyTplDir(generator, scanPath
-  , destinationPath,  extensionConfig, exclude=[]) {
+  , destinationPath, extensionConfig, exclude=[]) {
   const destPath = destinationPath.length>0?destinationPath+'/':''
   const sourcePath = scanPath.length>0?scanPath+'/':''
   loadDirList(generator.templatePath(scanPath), exclude)
@@ -124,12 +128,4 @@ export function getAllFile(scanPath){
   }
   traverse(scanPath)
   return res;
-}
-
-export function convertPath(pathStr){
-  const pathList = pathStr.replace(/\\/g, '/')
-  // console.log('pathlist 1', pathList)
-  return pathList
-  // const pathObj = path.join(pathList)
-  // console.log('pathObj', pathObj)
 }

@@ -3,8 +3,6 @@ import Generator from 'yeoman-generator';
 import { Chalk } from 'chalk';
 import * as prompts from './prompts.js';
 import * as tools from './tools.js';
-import { mkdirp } from 'mkdirp'
-import * as fs from 'fs';
 
 const chalk = new Chalk();
 
