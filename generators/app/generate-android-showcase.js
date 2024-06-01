@@ -54,11 +54,12 @@ export default {
     // 自定义library(空)
     var feature_libraryName = "feature_" + extensionConfig.libraryName
     tools.copyTplLibrary(generator,'feature_empty',feature_libraryName,
-    sourcePackageDir+'/favourite',
+    sourcePackageDir+'/empty',
     packageDir+'/'+extensionConfig.libraryName, extensionConfig, [],[
-    {source:'/favourite/', target:'/'+extensionConfig.libraryName+'/'},{source:'FavouriteKoinModule.kt', target:extensionConfig.libraryNameCU+'KoinModule.kt'}, 
-    {source:'FavouriteFragment.kt', target:extensionConfig.libraryNameCU+'Fragment.kt'},
-    {source:'feature_favourite_nav_graph.xml', target:'feature_'+extensionConfig.libraryName+'_nav_graph.xml'}])
+    {source:'/empty/', target:'/'+extensionConfig.libraryName+'/'},
+    {source:'EmptyKoinModule.kt', target:extensionConfig.libraryNameCU+'KoinModule.kt'}, 
+    {source:'EmptyFragment.kt', target:extensionConfig.libraryNameCU+'Fragment.kt'},
+    {source:'feature_empty_nav_graph.xml', target:'feature_'+extensionConfig.libraryName+'_nav_graph.xml'}])
     
     // library单元测试库
     tools.copyTplLibrary(generator,'konsist_test','konsist_test',
