@@ -22,7 +22,7 @@ export function askForApplicationName(generator, extensionConfig) {
         type: 'input',
         name: 'applicationName',
         message: 'What\'s the name of your application?',
-        default: nameFromFolder
+        default: generator.appname
     }).then(applicationNameAnswer => {
         extensionConfig.applicationName = applicationNameAnswer.applicationName;
     });

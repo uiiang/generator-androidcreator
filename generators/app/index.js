@@ -19,7 +19,7 @@ export default class extends Generator {
         super(args, opts);
         this.description = 'android工程框架脚手架生成器';
 
-        this.argument('destination', { type: String, required: false, description: `\n    The folder to create the application project, absolute or relative to the current working directory.\n    Use '.' for the current folder. If not provided, defaults to a folder with the application name.\n  ` })
+        // this.argument('destination', { type: String, required: false, description: `\n    The folder to create the application project, absolute or relative to the current working directory.\n    Use '.' for the current folder. If not provided, defaults to a folder with the application name.\n  ` })
 
         this.extensionConfig = Object.create(null);
         this.abort = false;
@@ -29,11 +29,11 @@ export default class extends Generator {
         // Welcome
         this.log(yosay('Welcome to the android project generator!'));
 
-        const destination = this.options['destination'];
-        if (destination) {
-            const folderPath = path.resolve(this.destinationPath(), destination);
-            this.destinationRoot(folderPath);
-        }
+        // const destination = this.options['destination'];
+        // if (destination) {
+        //     const folderPath = path.resolve(this.destinationPath(), destination);
+        //     this.destinationRoot(folderPath);
+        // }
     }
 
     async prompting() {
@@ -65,10 +65,10 @@ export default class extends Generator {
         if (this.abort) {
             return;
         }
-        if (!this.options['destination'] && !this.extensionGenerator.update) {
-            this.destinationRoot(this.destinationPath(this.extensionConfig.name))
-        }
-        this.env.cwd = this.destinationPath();
+        // if (!this.options['destination'] && !this.extensionGenerator.update) {
+        //     this.destinationRoot(this.destinationPath(this.extensionConfig.name))
+        // }
+        // this.env.cwd = this.destinationPath();
 
         this.log();
         this.log(`Writing in ${this.destinationPath()}...`);
