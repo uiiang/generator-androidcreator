@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Id of navigation graph matches id of the bottom_nav_menu.xml item (to make bottom menu navigation work).-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/<%= libraryName %>NavGraph"
+        app:startDestination="@id/<%= libraryName %>Fragment">
+    <fragment
+            android:id="@+id/<%= libraryName %>Fragment"
+            android:name="<%= basePackageName %>.<%= libraryName %>.presentation.screen.<%= libraryName %>.<%= libraryNameCU %>Fragment"
+            android:label="<%= libraryNameCU %>Fragment" />
+</navigation>

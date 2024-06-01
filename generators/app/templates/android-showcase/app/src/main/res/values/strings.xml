@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name"><%= applicationNameCU %></string>
+
+    <!--Dynamic module titles-->
+    <string name="feature_<%= libraryName %>">feature <%= libraryName %></string>
+
+    <!--Bottom menu-->
+    <string name="<%= libraryName %>s"><%= libraryNameCU %></string>
+</resources>
