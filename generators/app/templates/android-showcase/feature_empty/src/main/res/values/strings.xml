@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name"><%= applicationNameCU %></string>
 
-    <string name="search_<%= libraryName %>_hint">Search <%= libraryNameCU %></string>
+    <string name="search_<%= librarys[idx].libraryName %>_hint">Search <%= librarys[idx].libraryNameCU %></string>
 
     <!--Dynamic module titles-->
-    <string name="feature_<%= libraryName %>">feature <%= libraryName %></string>
+    <string name="feature_<%= librarys[idx].libraryName %>">feature <%= librarys[idx].libraryName %></string>
 
     <!--Bottom menu-->
-    <string name="<%= libraryName %>"><%= libraryNameCU %></string>
+    <string name="<%= librarys[idx].libraryName %>"><%= librarys[idx].libraryNameCU %></string>
 </resources>

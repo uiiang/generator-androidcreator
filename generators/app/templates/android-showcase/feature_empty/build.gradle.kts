@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "<%= basePackageName %>.<%= libraryName %>"
+    namespace = "<%= basePackageName %>.<%= librarys[idx].libraryName %>"
 }
 
 dependencies {

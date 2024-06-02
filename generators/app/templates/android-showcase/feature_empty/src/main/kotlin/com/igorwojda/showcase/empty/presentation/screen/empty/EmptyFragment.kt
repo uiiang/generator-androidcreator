@@ -1,4 +1,4 @@
-package <%= basePackageName %>.<%= libraryName %>.presentation.screen.<%= libraryName %>
+package <%= basePackageName %>.<%= librarys[idx].libraryName %>.presentation.screen.<%= librarys[idx].libraryName %>
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,12 +10,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import <%= basePackageName %>.base.presentation.activity.BaseFragment
 import <%= basePackageName %>.base.presentation.compose.composable.UnderConstructionAnim
 
-class <%= libraryNameCU %>Fragment : BaseFragment() {
+class <%= librarys[idx].libraryNameCU %>Fragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return ComposeView(requireContext()).apply {
             setContent {
-                <%= libraryNameCU %>Screen()
+                <%= librarys[idx].libraryNameCU %>Screen()
             }
         }
     }
@@ -23,6 +23,6 @@ class <%= libraryNameCU %>Fragment : BaseFragment() {
 
 @Preview
 @Composable
-private fun <%= libraryNameCU %>Screen() {
+private fun <%= librarys[idx].libraryNameCU %>Screen() {
     UnderConstructionAnim()
 }

@@ -1,4 +1,4 @@
-package <%= basePackageName %>.<%= libraryName %>.data
+package <%= basePackageName %>.<%= librarys[idx].libraryName %>.data
 
 import org.koin.dsl.module
 

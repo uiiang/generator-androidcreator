@@ -2,8 +2,12 @@
     <string name="app_name"><%= applicationNameCU %></string>
 
     <!--Dynamic module titles-->
-    <string name="feature_<%= libraryName %>">feature <%= libraryName %></string>
+<% librarys.forEach(item=>{ %>
+    <string name="feature_<%= item.libraryName %>">feature <%= item.libraryName %></string>
+<% }) %>
 
     <!--Bottom menu-->
-    <string name="<%= libraryName %>s"><%= libraryNameCU %></string>
+<% librarys.forEach(item=>{ %>
+    <string name="<%= item.libraryName %>"><%= item.libraryNameCU %></string>
+<% }) %>
 </resources>

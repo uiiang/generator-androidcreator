@@ -18,7 +18,7 @@ abstract class BaseActivity(@LayoutRes contentLayoutId: Int) : AppCompatActivity
         val Fragment.mainActivity: BaseActivity
             get() = activity as BaseActivity
 
-        const val DESTINATION_<%= libraryNameUAll %>_LIST_LABEL = "<%= libraryNameCU %>ListFragment"
+        const val DESTINATION_<%= mainLibraryNameUAll %>_LIST_LABEL = "<%= mainLibraryNameCU %>ListFragment"
     }
 
     /** Declaring the app bar components in the BaseActivity to be able to access them from other fragments and avoid cyclic dependencies*/

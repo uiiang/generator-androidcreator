@@ -4,7 +4,9 @@ import android.app.Application
 import com.google.android.material.color.DynamicColors
 import <%= basePackageName %>.BuildConfig
 import <%= basePackageName %>.base.baseModule
-import <%= basePackageName %>.<%= libraryName %>.feature<%= libraryNameCU %>Modules
+<% librarys.forEach(item=>{ %>
+import <%= basePackageName %>.<%= item.libraryName %>.feature<%= item.libraryNameCU %>Modules
+<% }) %>
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext
@@ -33,7 +35,10 @@ class <%= applicationNameCU %>Application : Application() {
 
             modules(appModule)
             modules(baseModule)
-            modules(feature<%= libraryNameCU %>Modules)
+            <% librarys.forEach(item=>{ %>
+            modules(feature<%= item.libraryNameCU %>Modules)
+            <% }) %>
+            
         }
     }
 

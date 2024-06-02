@@ -3,7 +3,9 @@ rootProject.name = "<%= applicationName %>"
 include(
     ":app",
     ":feature_base",
-    ":feature_<%= libraryName %>",
+<% librarys.forEach(item=>{ %>
+    ":feature_<%= item.libraryName %>",
+<% }) %>
     ":library_test_utils",
     ":konsist_test",
 )

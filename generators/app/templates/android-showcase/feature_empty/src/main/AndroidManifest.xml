@@ -4,7 +4,7 @@
     <dist:module
             dist:instant="false"
             dist:onDemand="false"
-            dist:title="@string/feature_<%= libraryName %>">
+            dist:title="@string/feature_<%= librarys[idx].libraryName %>">
         <dist:fusing dist:include="false" />
     </dist:module>
 

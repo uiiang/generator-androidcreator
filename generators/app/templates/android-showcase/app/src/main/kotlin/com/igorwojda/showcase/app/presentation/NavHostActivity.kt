@@ -8,7 +8,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import <%= basePackageName %>.R
-import <%= basePackageName %>.<%= libraryName %>.presentation.screen.<%= libraryName %>.<%= libraryNameCU %>Fragment
+import <%= basePackageName %>.<%= mainLibraryName %>.presentation.screen.<%= mainLibraryName %>.<%= mainLibraryNameCU %>Fragment
 import <%= basePackageName %>.base.presentation.activity.BaseActivity
 import <%= basePackageName %>.base.presentation.ext.navigateSafe
 import <%= basePackageName %>.base.presentation.nav.NavManager
@@ -58,8 +58,8 @@ class NavHostActivity : BaseActivity(R.layout.activity_nav_host), NavController.
 
     override fun onDestinationChanged(controller: NavController, destination: NavDestination, arguments: Bundle?) {
         when (destination.label) {
-            DESTINATION_<%= libraryNameUAll %>_LIST_LABEL -> {
-                // <%= libraryNameCU %>ListFragment.configureAppBar(this)
+            DESTINATION_<%= mainLibraryNameUAll %>_LIST_LABEL -> {
+                // <%= mainLibraryNameCU %>ListFragment.configureAppBar(this)
             }
             else -> {
                 binding.mainAppbarLayout.visibility = View.GONE

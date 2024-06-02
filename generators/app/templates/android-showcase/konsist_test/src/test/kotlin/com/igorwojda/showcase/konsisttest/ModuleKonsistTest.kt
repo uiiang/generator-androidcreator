@@ -12,7 +12,7 @@ class ModuleKonsistTest {
         Konsist.scopeFromProject()
             .files
             .assert {
-                // <%= basePackageName %>.<%= libraryName %>.presentation.screen.<%= libraryName %>detail
+                // <%= basePackageName %>.<%= mainLibraryName %>.presentation.screen.<%= mainLibraryName %>detail
                 val modulePackageName = it.moduleName
                     .lowercase()
                     .replace("feature_", "")

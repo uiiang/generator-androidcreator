@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Id of each item matches the id of the feature specific nav graph (to make bottom menu navigation work).-->
+<% librarys.forEach(item=>{ %>
     <item
-            android:id="@+id/<%= libraryName %>NavGraph"
-            android:icon="@drawable/ic_round_dashboard"
-            android:title="@string/<%= libraryName %>s" />
+        android:id="@+id/<%= item.libraryName %>NavGraph"
+        android:icon="@drawable/ic_round_dashboard"
+        android:title="@string/<%= item.libraryName %>" />
+    <% }) %>
+
 </menu>
