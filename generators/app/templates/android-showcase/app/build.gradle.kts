@@ -34,7 +34,7 @@ android {
         }
 
         buildConfigFieldFromGradleProperty("apiBaseUrl")
-        buildConfigFieldFromGradleProperty("apiToken")
+        // buildConfigFieldFromGradleProperty("apiToken")
     }
 
     buildTypes {

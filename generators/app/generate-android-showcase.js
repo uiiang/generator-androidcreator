@@ -28,9 +28,8 @@ export default {
     const sourcePackageDir = 'com/igorwojda/showcase'
     var packageName = extensionConfig.basePackageName
     var packageDir = packageName.replace(/\./g, '/');
-    console.log('开始生成配置文件', extensionConfig)
+    // console.log('开始生成配置文件', extensionConfig)
     // 主工程目录
-    generator.log('开始生成主工程目录')
     tools.copyTplLibrary(generator, 'app', 'app',
       sourcePackageDir, packageDir, extensionConfig,
       [], [{
@@ -39,7 +38,6 @@ export default {
       }])
 
     // feature_base
-    generator.log('开始生成feature_base')
     tools.copyTplLibrary(generator, 'feature_base', 'feature_base',
       sourcePackageDir,
       packageDir, extensionConfig, [])
@@ -51,25 +49,30 @@ export default {
     for (var i = 0; i < librarys.length; i++) {
       const lib = librarys[i]
       extensionConfig.idx = i
-      generator.log('开始生成library', lib.libraryName)
       var feature_libraryName = "feature_" + lib.libraryName
       tools.copyTplLibrary(generator, 'feature_empty', feature_libraryName,
         sourcePackageDir + '/empty',
         packageDir + '/' + lib.libraryName, extensionConfig, [], [
         { source: '/empty/', target: '/' + lib.libraryName + '/' },
-        { source: 'EmptyKoinModule.kt', target: lib.libraryNameCU + 'KoinModule.kt' },
-        { source: 'EmptyFragment.kt', target: lib.libraryNameCU + 'Fragment.kt' },
+        { source: 'empty', target: lib.libraryName },
+        { source: 'Empty', target: lib.libraryNameCU },
+        // { source: 'EmptyKoinModule.kt', target: lib.libraryNameCU + 'KoinModule.kt' },
+        // { source: 'EmptyDetailViewModel.kt', target: lib.libraryNameCU + 'DetailViewModel.kt' },
+        // { source: 'EmptyDetailFragment.kt', target: lib.libraryNameCU + 'DetailFragment.kt' },
+        // { source: 'EmptyListViewModel.kt', target: lib.libraryNameCU + 'ListViewModel.kt' },
+        // { source: 'EmptyListFragment.kt', target: lib.libraryNameCU + 'ListFragment.kt' },
+        // { source: 'GetEmptyListUseCase.kt', target: 'Get'+lib.libraryNameCU + 'ListUseCase.kt' },
+        // { source: 'GetEmptyUseCase.kt', target: 'Get'+lib.libraryNameCU + 'UseCase.kt' },
+        // { source: 'EmptyRepository.kt', target: lib.libraryNameCU + 'Repository.kt' },
+        // { source: 'Empty.kt', target: lib.libraryNameCU + '.kt' },
+        // { source: 'EmptyRepositoryImpl.kt', target: lib.libraryNameCU + 'RepositoryImpl.kt' },
+        // { source: 'EmptyDatabase.kt', target: lib.libraryNameCU + 'Database.kt' },
+        // { source: 'EmptyDao.kt', target: lib.libraryNameCU + 'Dao.kt' },
+        // { source: 'EmpttyEntityModel.kt', target: lib.libraryNameCU + 'EntityModel.kt' },
+        // { source: 'EmptyRetrofitService.kt', target: lib.libraryNameCU + 'RetrofitService.kt' },
+        // { source: 'Empty.kt', target: lib.libraryNameCU + '.kt' },
         { source: 'feature_empty_nav_graph.xml', target: 'feature_' + lib.libraryName + '_nav_graph.xml' }])
     }
-    // var feature_libraryName = "feature_" + extensionConfig.libraryName
-    // tools.copyTplLibrary(generator, 'feature_empty', feature_libraryName,
-    //   sourcePackageDir + '/empty',
-    //   packageDir + '/' + extensionConfig.libraryName, extensionConfig, [], [
-    //   { source: '/empty/', target: '/' + extensionConfig.libraryName + '/' },
-    //   { source: 'EmptyKoinModule.kt', target: extensionConfig.libraryNameCU + 'KoinModule.kt' },
-    //   { source: 'EmptyFragment.kt', target: extensionConfig.libraryNameCU + 'Fragment.kt' },
-    //   { source: 'feature_empty_nav_graph.xml', target: 'feature_' + extensionConfig.libraryName + '_nav_graph.xml' }])
-
     // library单元测试库
     tools.copyTplLibrary(generator, 'konsist_test', 'konsist_test',
       sourcePackageDir,

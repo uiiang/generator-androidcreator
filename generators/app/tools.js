@@ -29,14 +29,14 @@ export function copyTplFileList(generator, scanPath
   const sourcePath = scanPath.length>0?scanPath+'/':''
   loadFileList(generator.templatePath(scanPath), exclude)
   .forEach(item => {
-    generator.log('copyTplFileList item',item)
-    generator.log('copyTplFileList templatepath',generator.templatePath(sourcePath+item))
-    generator.log('copyTplFileList destpath',generator.destinationPath(destPath+item))
+    // generator.log('copyTplFileList item',item)
+    // generator.log('copyTplFileList templatepath',generator.templatePath(sourcePath+item))
+    // generator.log('copyTplFileList destpath',generator.destinationPath(destPath+item))
       
     generator.fs.copyTpl(generator.templatePath(sourcePath+item), 
     generator.destinationPath(destPath+item), extensionConfig);
   })
-  generator.log('==============================')
+  // generator.log('==============================')
 }
 
 export function copyTplDir(generator, scanPath
@@ -53,6 +53,7 @@ export function copyTplDir(generator, scanPath
 export function copyTplLibrary(generator, scanPath, 
   destinationPath, sourcePackageDir, targetPackageDir,
   extensionConfig, exclude=[], replace=[]) {
+    generator.log('开始生成library', destinationPath)
     // generator.log('targetPackageDir', targetPackageDir)
     const destPath = destinationPath.length>0?destinationPath+'/':'/'
     const sourcePath = scanPath.length>0?scanPath+'/':'/'
@@ -76,18 +77,18 @@ export function copyTplLibrary(generator, scanPath,
       generator.fs.copyTpl(generator.templatePath(sourcePath+item), 
         generator.destinationPath(destPath+savePath), extensionConfig);
     })
-    generator.log('==============================')
+    // generator.log('==============================')
 }
 
 export function loadDirList(path, exclude=[]) {
   const files = fs.readdirSync(path);
   return files.filter((itemPath)=>{
-    console.log('itemPath', path+"/"+itemPath)
+    // console.log('itemPath', path+"/"+itemPath)
     const states = fs.statSync(path+"/"+itemPath)
     // console.log('states', states)
     return states.isDirectory()
   }).map((item)=>{
-    console.log("map" , item)
+    // console.log("map" , item)
     return item
   }).filter((item)=>{
     return exclude.indexOf(item)<0
@@ -95,15 +96,15 @@ export function loadDirList(path, exclude=[]) {
 }
 
 export function loadFileList(path, exclude=[]) {
-  console.log('loadFileList scanPath',path)
+  // console.log('loadFileList scanPath',path)
   const files = fs.readdirSync(path);
   return files.filter((itemPath)=>{
-    console.log('itemPath', path+"/"+itemPath)
+    // console.log('itemPath', path+"/"+itemPath)
     const states = fs.statSync(path+"/"+itemPath)
     // console.log('states', states)
     return states.isFile()
   }).map((item)=>{
-    console.log("map" , item)
+    // console.log("map" , item)
     return item
   }).filter((item)=>{
     return exclude.indexOf(item)<0
@@ -111,7 +112,7 @@ export function loadFileList(path, exclude=[]) {
 }
 export function getAllFile(scanPath){
   const baseDir = scanPath
-  console.log('getAllFile scanPath',scanPath)
+  // console.log('getAllFile scanPath',scanPath)
   let res=[]
   function traverse(scanPath){
       fs.readdirSync(scanPath).forEach((file)=>{
