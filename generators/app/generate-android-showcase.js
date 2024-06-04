@@ -1,8 +1,8 @@
 
 import Generator from 'yeoman-generator';
 import { Chalk } from 'chalk';
-import * as prompts from './prompts.js';
-import * as tools from './tools.js';
+import * as prompts from './common/prompts.js';
+import * as tools from './common/tools.js';
 
 const chalk = new Chalk();
 

@@ -5,7 +5,7 @@ import Generator from 'yeoman-generator';
 import yosay from 'yosay';
 import { fileURLToPath } from 'url';
 import * as path from 'path';
-import androidShowcase from './generate-android-showcase.js';
+import androidShowcase from '../generate-android-showcase.js';
 
 const extensionGenerators = [
     androidShowcase

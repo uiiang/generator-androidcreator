@@ -1,8 +1,8 @@
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { RunResult, createHelpers } from 'yeoman-test';
-import * as env from '../generators/app/env.js';
-import * as tools from '../generators/app/tools.js';
+import * as env from '../generators/app/common/env.js';
+import * as tools from '../generators/app/common/tools.js';
 import assert from 'assert';
 
 describe('测试工具类', function() {

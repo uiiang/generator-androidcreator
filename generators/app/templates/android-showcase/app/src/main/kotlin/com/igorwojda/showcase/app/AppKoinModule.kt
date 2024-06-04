@@ -16,7 +16,7 @@ import timber.log.Timber
 
 val appModule = module {
 
-    single { AuthenticationInterceptor(BuildConfig.GRADLE_API_TOKEN) }
+    // single { AuthenticationInterceptor(BuildConfig.GRADLE_API_TOKEN) }
 
     singleOf(::UserAgentInterceptor)
 
