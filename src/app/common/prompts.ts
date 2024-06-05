@@ -4,7 +4,7 @@ import * as path from 'path';
 import * as tools from './tools.js';
 import { ExtensionConfig, LibraryObj, ChoiceOption } from './extension_config.js'
 
-
+const chalk = new Chalk()
 /**
 * @param {Generator} generator
 * @param {Object} extensionConfig
@@ -61,7 +61,7 @@ export async function askForLibraryName(generator: yo, order: string) {
   return (await generator.prompt({
     type: 'input',
     name: 'libraryName',
-    message: 'What\'s the ' + order + ' libraryName name of your application?',
+    message: 'What\'s the ' + chalk.blue(order) + ' libraryName name of your application?',
     default: 'newlibrary',
     // validate: validator.validateExtensionId
   })).libraryName;
@@ -83,7 +83,7 @@ export async function askForLibraryType(generator: yo, order: string) {
   return (await generator.prompt({
     type: 'list',
     name: 'libraryType',
-    message: 'What\'s the ' + order + ' library Type of your application?',
+    message: 'What\'s the ' + chalk.blue(order) + ' library Type of your application?',
     default: 'empty',
     pageSize: choices.length,
     choices,
