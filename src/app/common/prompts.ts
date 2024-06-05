@@ -10,13 +10,6 @@ const chalk = new Chalk()
 * @param {Object} extensionConfig
 */
 export function askForApplicationName(generator: yo, extensionConfig: ExtensionConfig) {
-  let applicationName = generator.options['applicationName'];
-  if (applicationName) {
-    extensionConfig.applicationName = applicationName;
-    return Promise.resolve();
-  }
-  const nameFromFolder = generator.options['destination'] ? path.basename(generator.destinationPath()) : '';
-
   return generator.prompt({
     type: 'input',
     name: 'applicationName',
@@ -36,11 +29,6 @@ export function askForApplicationName(generator: yo, extensionConfig: ExtensionC
 * @param {Object} extensionConfig
 */
 export function askForBasePackageName(generator: yo, extensionConfig: ExtensionConfig) {
-  const basePackageName = generator.options['basePackageName'];
-  if (basePackageName) {
-    extensionConfig.basePackageName = basePackageName;
-    return Promise.resolve();
-  }
   let def = "com." + extensionConfig.applicationName;
   return generator.prompt({
     type: 'input',

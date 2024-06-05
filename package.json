@@ -20,6 +20,9 @@
     "build": "rimraf generators && concurrently \"npm run tsc\" \"npm run copy\"",
     "test": "mocha --timeout 0 -r ts-node/register generators/test/**.js"
   },
+  "workspaces": [
+    "./packages/quicktype-core"
+  ],
   "dependencies": {
     "mkdirp": "^3.0.1",
     "chalk": "^5.3.0",
@@ -27,7 +30,9 @@
     "request-light": "^0.7.0",
     "which": "^4.0.0",
     "yeoman-generator": "^7.2.0",
-    "yosay": "^3.0.0"
+    "yosay": "^3.0.0",
+    "type-of-is": "^3.5.1",
+    "quicktype-core": "^23.0.170"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
