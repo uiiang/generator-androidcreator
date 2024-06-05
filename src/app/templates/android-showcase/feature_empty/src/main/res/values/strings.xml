@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name"><%= applicationNameCU %></string>
+
+    <string name="<%= librarys[idx].libraryName %>_cover_content_description"><%= librarys[idx].libraryNameCU %> Cover</string>
+    <string name="search_<%= librarys[idx].libraryName %>_hint">Search <%= librarys[idx].libraryNameCU %></string>
+
+    <string name="prducts">Products</string>
+    <!--Dynamic module titles-->
+    <string name="feature_<%= librarys[idx].libraryName %>">feature <%= librarys[idx].libraryName %></string>
+
+    <!--Bottom menu-->
+    <string name="<%= librarys[idx].libraryName %>"><%= librarys[idx].libraryNameCU %></string>
+</resources>

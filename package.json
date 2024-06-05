@@ -7,16 +7,18 @@
     "android",
     "android show case"
   ],
-  "type": "module",
-  "main": "./generators/app/index.js",
+  "main": "generators/index.js",
   "engines": {
-    "node": ">=16.x"
+    "node": ">=16"
   },
   "scripts": {
-    "test": "mocha",
-    "prepublishOnly": "npm test",
-    "preversion": "npm test",
-    "postversion": "git push && git push --tags"
+    "copy": "copyfiles \"src/app/templates/**/*\" -u 2 generators/app && copyfiles \"src/app/config/**/projectProperties.json*\" -u 3 generators/test",
+    "lint": "eslint --ext .ts src",
+    "tsc": "tsc -p tsconfig.json",
+    "tsc-watch": "tsc -p tsconfig.json -w",
+    "start": "rimraf generators && concurrently \"npm run tsc-watch\" \"npm run copy\"",
+    "build": "rimraf generators && concurrently \"npm run tsc\" \"npm run copy\"",
+    "test": "mocha --timeout 0 -r ts-node/register generators/test/**.js"
   },
   "dependencies": {
     "mkdirp": "^3.0.1",
@@ -24,14 +26,22 @@
     "fast-plist": "^0.1.3",
     "request-light": "^0.7.0",
     "which": "^4.0.0",
-    "yeoman-generator": "^6.0.1",
+    "yeoman-generator": "^7.2.0",
     "yosay": "^3.0.0"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "^16.18.82",
     "mocha": "^10.4.0",
-    "yeoman-environment": "^3.19.3",
-    "yeoman-test": "^8.2.0"
-  }
+    "yeoman-environment": "^4.4.1",
+    "yeoman-test": "^8.3.0",
+    "concurrently": "^8.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.7"
+  },
+  "type": "module",
+  "author": "uiiang",
+  "license": "ISC"
 }
