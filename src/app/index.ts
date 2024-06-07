@@ -5,11 +5,11 @@ import { fileURLToPath } from 'url';
 import * as path from 'path';
 import { ChoiceOption, ExtensionConfig } from './common/extension_config.js'
 
+import * as tools from './common/tools.js';
 import androidShowcase from './helpers/generate-android-showcase.js'
-import androidDataModel from './helpers/generate-android-datamodel.js'
 
 const extensionGenerators = [
-  androidShowcase, androidDataModel
+  androidShowcase
 ]
 
 export default class extends Generator {
@@ -20,7 +20,10 @@ export default class extends Generator {
     super(args, opts);
     this.description = 'android脚手架生成器';
 
-    this.extensionConfig = Object.create(null);
+    // this.extensionConfig = Object.create(null);
+    this.extensionConfig = tools.loadProjectInfoJson(this)
+
+    console.log(this.extensionConfig)
     this.abort = false;
   }
 

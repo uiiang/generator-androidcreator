@@ -8,10 +8,10 @@ import * as fs from 'fs';
 
 
 export default new class GeneratorAndroidDataModel {
-  id: string = 'android-datamodel'
-  aliases: string[] = ['android', 'datamodel']
-  name: string = 'Android DataModel'
-
+  dataModelPackageName: string = ''
+  dataModelForLibrary: string = ''
+  dataModelSourceFilePath: string = ''
+  dataModelBaseClassName: string = ''
 
   /**
  * @param {Generator} generator
@@ -19,11 +19,14 @@ export default new class GeneratorAndroidDataModel {
  */
   async prompting(generator: yo, extensionConfig: ExtensionConfig): Promise<void> {
     try {
-      await prompts.askForDataModelSourceType(generator, extensionConfig);
-      await prompts.askForDataModelSourcePath(generator, extensionConfig);
-      await prompts.askForDataModelPackageName(generator, extensionConfig);
-      await prompts.askForDataModelBaseClassName(generator, extensionConfig);
+      this.dataModelForLibrary = await prompts.askForDataModelForLibrary(generator, extensionConfig)
+      this.dataModelPackageName = extensionConfig.basePackageName + '.' + this.dataModelForLibrary + '.domain.model'
+      // await prompts.askForDataModelSourceType(generator, extensionConfig);
+      this.dataModelSourceFilePath = await prompts.askForDataModelSourcePath(generator);
+      // await prompts.askForDataModelPackageName(generator, extensionConfig);
+      this.dataModelBaseClassName = await prompts.askForDataModelBaseClassName(generator);
     } catch (err) {
+      console.log(err)
     }
   }
 
@@ -32,19 +35,19 @@ export default new class GeneratorAndroidDataModel {
    * @param {Generator} generator
    * @param {Object} extensionConfig
    */
-  async writing(generator: yo, extensionConfig: ExtensionConfig) {
-    const dataModelFilePath = extensionConfig.dataModelFilePath
+  async writing(generator: yo) {
+    const dataModelFilePath = this.dataModelSourceFilePath
     if (fs.existsSync(dataModelFilePath)) {
-      tools.loadDataModelSource(extensionConfig.dataModelFilePath,
-        extensionConfig.dataModelSourceType,
-        extensionConfig.dataModelPackageName,
-        extensionConfig.dataModelBaseClassName
+      tools.loadDataModelSource(this.dataModelSourceFilePath,
+        this.dataModelPackageName,
+        this.dataModelBaseClassName
       ).then(dataModelSource => {
-        extensionConfig.dataModelSource = dataModelSource
-        console.log('dataModelSource', dataModelSource)
-        tools.copyTpls(generator, extensionConfig,
-          [{ source: 'Empty.kt', target: extensionConfig.dataModelBaseClassName + '.kt' },
-          ])
+        const genSource = dataModelSource
+        // console.log('dataModelSource', dataModelSource)
+        const targetPath = generator.destinationPath() + '/feature_' + this.dataModelForLibrary + '/src/main/kotlin/' + tools.convertDotToPath(this.dataModelPackageName) + '/' + this.dataModelBaseClassName + '.kt'
+        // console.log('targetPath', targetPath)
+        generator.fs.copyTpl(generator.templatePath('other_src/Empty.kt'),
+          targetPath, { 'dataModelSource': genSource });
       })
 
     } else {

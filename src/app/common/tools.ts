@@ -34,6 +34,10 @@ export function convertPath(pathStr: string) {
   return pathStr.replace(/\\/g, '/').replace('//', '/')
 }
 
+export function convertDotToPath(pathStr: string) {
+  return pathStr.replace(/\./g, '/')
+}
+
 
 export function loadDirList(path: string, exclude: string[] = []) {
   const files = fs.readdirSync(path);
@@ -185,7 +189,6 @@ export function copyTplLibrary(generator: yo,
 }
 
 export async function loadDataModelSource(dataModelFilePath: string,
-  dataModelSourceType: string,
   dataModelPackageName: string,
   dataModelBaseClassName: string): Promise<string> {
   const options = {
@@ -200,27 +203,28 @@ export async function loadDataModelSource(dataModelFilePath: string,
     outputFilename: dataModelBaseClassName + '.kt'
   }
   const sourceContent = fs.readFileSync(dataModelFilePath)
-  if (dataModelSourceType == 'schema') {
-    const jsonInput = new JSONSchemaInput(new FetchingJSONSchemaStore());
-    await jsonInput.addSource({
-      name: dataModelBaseClassName,
-      schema: sourceContent.toString()
-    })
-    const inputData = new InputData()
-    inputData.addInput(jsonInput)
-    options['inputData'] = inputData
-    return (await quicktype(options)).lines.join("\n")
-  } else if (dataModelSourceType == 'data') {
-    const jsonInput = jsonInputForTargetLanguage('kotlin')
-    await jsonInput.addSource({
-      name: dataModelBaseClassName,
-      samples: [sourceContent.toString()]
-    });
-    const inputData = new InputData();
-    inputData.addInput(jsonInput);
-    options['inputData'] = inputData
-    return (await quicktype(options)).lines.join("\n")
-  } else {
-    return ['选择数据源类型 ' + dataModelSourceType + ' 错误'].join("\n")
+
+  const jsonInput = jsonInputForTargetLanguage('kotlin')
+  await jsonInput.addSource({
+    name: dataModelBaseClassName,
+    samples: [sourceContent.toString()]
+  });
+  const inputData = new InputData();
+  inputData.addInput(jsonInput);
+  options['inputData'] = inputData
+  return (await quicktype(options)).lines.join("\n")
+}
+
+export function saveProjectInfoJson(generator: yo,
+  extensionConfig: ExtensionConfig) {
+  console.log('saveProjectInfoJson', generator.destinationPath(), generator.destinationPath('/creator.json'))
+  fs.writeFileSync(generator.destinationPath() + '/creator.json', JSON.stringify(extensionConfig, null, "\t"))
+}
+
+export function loadProjectInfoJson(generator: yo) {
+  try {
+    return JSON.parse(fs.readFileSync(generator.destinationPath() + '/creator.json').toString())
+  } catch (ex) {
+    return Object.create(null)
   }
 }

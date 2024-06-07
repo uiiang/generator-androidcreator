@@ -8,15 +8,14 @@ export interface ExtensionConfig {
   librarys: LibraryObj[],
   type: any,
   idx: number,
-  dataModelSourceType: string,
-  dataModelFilePath: string,
-  dataModelBaseClassName: string,
-  dataModelSource: string,
-  dataModelPackageName: string
+  // dataModelSourceType: string,
+  // dataModelFilePath: string,
+  // dataModelBaseClassName: string,
+  // dataModelSource: string,
+  // dataModelPackageName: string
 }
 export interface LibraryObj {
-  order: string,
-  libraryType: string,
+  order: number,
   libraryName: string,
   libraryNameUAll: string,
   libraryNameCU: string
