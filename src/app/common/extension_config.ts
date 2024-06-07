@@ -15,7 +15,7 @@ export interface ExtensionConfig {
   // dataModelPackageName: string
 }
 export interface LibraryObj {
-  order: number,
+  // order: number,
   libraryName: string,
   libraryNameUAll: string,
   libraryNameCU: string

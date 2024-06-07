@@ -3,25 +3,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/<%= librarys[idx].libraryName %>NavGraph"
-        app:startDestination="@id/<%= librarys[idx].libraryName %>ListFragment">
+        app:startDestination="@id/<%= librarys[idx].libraryName %>Fragment">
     <fragment
-            android:id="@+id/<%= librarys[idx].libraryName %>ListFragment"
-            android:name="<%= basePackageName %>.<%= librarys[idx].libraryName %>.presentation.screen.<%= librarys[idx].libraryName %>list.<%= librarys[idx].libraryNameCU %>ListFragment"
-            android:label="<%= librarys[idx].libraryNameCU %>ListFragment">
-        <action
-                android:id="@+id/action<%= librarys[idx].libraryNameCU %>ListTo<%= librarys[idx].libraryNameCU %>Detail"
-                app:destination="@id/<%= librarys[idx].libraryName %>DetailFragment" />
-    </fragment>
-
-    <fragment
-            android:id="@+id/<%= librarys[idx].libraryName %>DetailFragment"
-            android:name="<%= basePackageName %>.<%= librarys[idx].libraryName %>.presentation.screen.<%= librarys[idx].libraryName %>detail.<%= librarys[idx].libraryNameCU %>DetailFragment"
-            android:label="<%= librarys[idx].libraryNameCU %>DetailFragment">
-        <argument
-                android:name="id"
-                app:argType="long" />
-        <argument
-                android:name="title"
-                app:argType="string" />
+            android:id="@+id/<%= librarys[idx].libraryName %>Fragment"
+            android:name="<%= basePackageName %>.<%= librarys[idx].libraryName %>.presentation.screen.<%= librarys[idx].libraryName %>.<%= librarys[idx].libraryNameCU %>Fragment"
+            android:label="<%= librarys[idx].libraryNameCU %>Fragment">
     </fragment>
 </navigation>

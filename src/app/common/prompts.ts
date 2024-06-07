@@ -71,58 +71,55 @@ export function askForBasePackageName(generator: yo, extensionConfig: ExtensionC
  * Ask for library name
 * @param {Generator} generator
 */
-export async function askForLibraryName(generator: yo, order: string) {
+export async function askForLibraryName(generator: yo) {
   return (await generator.prompt({
     type: 'input',
     name: 'libraryName',
-    message: 'What\'s the ' + chalk.blue(order) + ' libraryName name of your application?',
+    message: 'What\'s the libraryName name of your application?',
     default: 'newlibrary',
     // validate: validator.validateExtensionId
   })).libraryName;
 }
 
-// export async function askForLibraryType(generator: yo, order: string) {
-//   const libraryTypeGenerators = [
-//     { name: "list album template", value: "list" },
-//     { name: "empty template", value: "empty" }
-//   ]
-//   if (order != 'main') {
-//     libraryTypeGenerators.push({ name: "不再添加library", value: "exit" })
-//   }
-//   const choices: ChoiceOption[] = [];
-//   for (const g of libraryTypeGenerators) {
-//     const name = g.name;
-//     choices.push({ name, value: g.value })
-//   }
-//   return (await generator.prompt({
-//     type: 'list',
-//     name: 'libraryType',
-//     message: 'What\'s the ' + chalk.blue(order) + ' library Type of your application?',
-//     default: 'empty',
-//     pageSize: choices.length,
-//     choices,
-//   })).libraryType
-// }
+export async function askForLibraryType(generator: yo, order: number) {
+  const libraryTypeGenerators = [
+    { name: "empty template", value: "empty" }
+  ]
+  if (order > 0) {
+    libraryTypeGenerators.push({ name: "不再添加library", value: "exit" })
+  }
+  const choices: ChoiceOption[] = [];
+  for (const g of libraryTypeGenerators) {
+    const name = g.name;
+    choices.push({ name, value: g.value })
+  }
+  return (await generator.prompt({
+    type: 'list',
+    name: 'libraryType',
+    message: 'What\'s the library Type of your application?',
+    default: 'empty',
+    pageSize: choices.length,
+    choices,
+  })).libraryType
+}
 
-export async function askForLibraryInfo(generator: yo, extensionConfig: ExtensionConfig) {
+export async function askForLibraryInfo(generator: yo) {
   var librarys: LibraryObj[] = []
-  for (var i = 1; i < 4; i++) {
-    const libraryName = await askForLibraryName(generator, i.toString())
-    if (i == 1) {
-      extensionConfig.mainLibraryName = tools.toLowerCase(libraryName)// 模块名首字母小写
-      extensionConfig.mainLibraryNameUAll = tools.toUpperAll(libraryName)// 模块名首字母小写
-      extensionConfig.mainLibraryNameCU = tools.toUpperCase(libraryName)// 模块名首字母小写
+  for (var i = 0; i < 3; i++) {
+    const selectedType = await askForLibraryType(generator, i)
+    if (selectedType == 'exit') {
+      break;
     }
+    const libraryName = await askForLibraryName(generator)
     // console.log('libraryType', selectedType, 'libraryName', libraryName)
     var lib: LibraryObj = {
-      order: i,
       libraryName: tools.toLowerCase(libraryName),// 模块名首字母小写
       libraryNameUAll: tools.toUpperAll(libraryName),// 模块名全大写
       libraryNameCU: tools.toUpperCase(libraryName)// 模块名首字母大写
     }
     librarys.push(lib)
   }
-  extensionConfig.librarys = librarys
+  return librarys
 }
 
 

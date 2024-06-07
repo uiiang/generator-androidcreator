@@ -59,7 +59,7 @@ class NavHostActivity : BaseActivity(R.layout.activity_nav_host), NavController.
     override fun onDestinationChanged(controller: NavController, destination: NavDestination, arguments: Bundle?) {
         when (destination.label) {
             DESTINATION_<%= mainLibraryNameUAll %>_LIST_LABEL -> {
-                // <%= mainLibraryNameCU %>ListFragment.configureAppBar(this)
+                // <%= mainLibraryNameCU %>Fragment.configureAppBar(this)
             }
             else -> {
                 binding.mainAppbarLayout.visibility = View.GONE

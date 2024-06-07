@@ -2,7 +2,7 @@ import yo from 'yeoman-generator';
 import { Chalk } from 'chalk';
 import * as prompts from '../common/prompts.js'
 import * as tools from '../common/tools.js';
-import { ExtensionConfig } from '../common/extension_config.js'
+import { ExtensionConfig, LibraryObj } from '../common/extension_config.js'
 import androidDataModel from './generate-android-datamodel.js'
 
 
@@ -11,6 +11,7 @@ export default new class GeneratorAndroidShowcase {
   aliases: string[] = ['android']
   name: string = 'Android project show case'
   createType: string = 'createProject'
+  librarys: LibraryObj[] = []
   /**
  * @param {Generator} generator
  * @param {Object} extensionConfig
@@ -21,9 +22,16 @@ export default new class GeneratorAndroidShowcase {
       if (this.createType == 'createProject') {
         await prompts.askForApplicationName(generator, extensionConfig)
         await prompts.askForBasePackageName(generator, extensionConfig)
-        await prompts.askForLibraryInfo(generator, extensionConfig)
+        this.librarys = await prompts.askForLibraryInfo(generator)
+        if (this.librarys.length > 0) {
+          const libraryName = this.librarys[0].libraryName
+          extensionConfig.mainLibraryName = tools.toLowerCase(libraryName)// 模块名首字母小写
+          extensionConfig.mainLibraryNameUAll = tools.toUpperAll(libraryName)// 模块名首字母小写
+          extensionConfig.mainLibraryNameCU = tools.toUpperCase(libraryName)// 模块名首字母小写
+        }
+        extensionConfig.librarys = this.librarys
       } else if (this.createType == 'createLibrary') {
-        await prompts.askForLibraryInfo(generator, extensionConfig)
+        this.librarys = await prompts.askForLibraryInfo(generator)
       } else if (this.createType == 'createDatamodel') {
         await androidDataModel.prompting(generator, extensionConfig)
       }
@@ -86,9 +94,27 @@ export default new class GeneratorAndroidShowcase {
         [{ source: 'gitignore', target: '.gitignore' },
         { source: 'gradle', target: 'gradle' },
         { source: 'buildSrc', target: 'buildSrc' },])
-        tools.saveProjectInfoJson(generator, extensionConfig)
+      tools.saveProjectInfoJson(generator, extensionConfig)
     } else if (this.createType == 'createDatamodel') {
       androidDataModel.writing(generator)
+    } else if (this.createType == 'createLibrary') {
+      for (var i = 0; i < this.librarys.length; i++) {
+        const lib = this.librarys[i]
+        extensionConfig.idx = i
+        var feature_libraryName = "feature_" + lib.libraryName
+        tools.copyTplLibrary(generator,
+          extensionConfig, 'feature_empty',
+          feature_libraryName,
+          sourcePackageDir + '/empty',
+          packageDir + '/' + lib.libraryName, ['Empty.kt'],
+          [{ source: '/empty/', target: '/' + lib.libraryName + '/' },
+          { source: 'empty', target: lib.libraryName },
+          { source: 'Empty', target: lib.libraryNameCU },
+          { source: 'feature_empty_nav_graph.xml', target: 'feature_' + lib.libraryName + '_nav_graph.xml' }])
+      }
+      extensionConfig.librarys = extensionConfig.librarys.concat(this.librarys)
+      console.log('extensionConfig.librarys', extensionConfig.librarys)
+      tools.saveProjectInfoJson(generator, extensionConfig)
     }
   }
 }
