@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Id of each item matches the id of the feature specific nav graph (to make bottom menu navigation work).-->
+    <!-- 在此处添加自定义模块菜单项 -->
 <% librarys.forEach(item=>{ %>
     <item
         android:id="@+id/<%= item.libraryName %>NavGraph"

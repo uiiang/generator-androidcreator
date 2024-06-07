@@ -4,6 +4,7 @@ import android.app.Application
 import com.google.android.material.color.DynamicColors
 import <%= basePackageName %>.BuildConfig
 import <%= basePackageName %>.base.baseModule
+// 在此处添加其它模块的引用
 <% librarys.forEach(item=>{ %>
 import <%= basePackageName %>.<%= item.libraryName %>.feature<%= item.libraryNameCU %>Modules
 <% }) %>
@@ -35,6 +36,7 @@ class <%= applicationNameCU %>Application : Application() {
 
             modules(appModule)
             modules(baseModule)
+            // 在此处添加引用模块
             <% librarys.forEach(item=>{ %>
             modules(feature<%= item.libraryNameCU %>Modules)
             <% }) %>

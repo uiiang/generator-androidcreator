@@ -72,6 +72,8 @@ android {
 
 dependencies {
     // Syntax utilizes Gradle TYPESAFE_PROJECT_ACCESSORS feature
+    // 在此处添加引用模块代码
+    // 例如: implementation(projects.feature[LibraryName])
 <% librarys.forEach(item=>{ %>
     implementation(projects.feature<%= item.libraryNameCU %>)
 <% }) %>

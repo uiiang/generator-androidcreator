@@ -5,6 +5,7 @@ import * as tools from '../common/tools.js';
 import { ExtensionConfig, LibraryObj } from '../common/extension_config.js'
 import androidDataModel from './generate-android-datamodel.js'
 
+const chalk = new Chalk();
 
 export default new class GeneratorAndroidShowcase {
   id: string = 'android-showcase'
@@ -115,6 +116,73 @@ export default new class GeneratorAndroidShowcase {
       extensionConfig.librarys = extensionConfig.librarys.concat(this.librarys)
       console.log('extensionConfig.librarys', extensionConfig.librarys)
       tools.saveProjectInfoJson(generator, extensionConfig)
+    }
+  }
+
+
+  /**
+   * @param {Generator} generator
+   * @param {Object} extensionConfig
+   */
+  endMessage(generator: yo, extensionConfig: ExtensionConfig) {
+    if (this.createType == 'createLibrary') {
+      generator.log(chalk.yellow(`已完成生成library代码`))
+      
+      for (var i = 0; i < this.librarys.length; i++) {
+        const lib = this.librarys[i]
+        generator.log(chalk.yellow(`模块名: ${lib.libraryName}`))
+        generator.log(`添加工程相关配置代码...`)
+        generator.log(`1, 在工程根目录下的 ${chalk.yellow('setting.gradle.kts')}中添加代码`)
+        generator.log(`include(`)
+        generator.log(` ...`)
+        generator.log(chalk.redBright(`":feature_${lib.libraryName}",`))
+        generator.log(` ...`)
+        generator.log(`)`)
+        
+        generator.log(`2, 在需要引用的模块下的${chalk.yellow('build.gradle.kts')}中添加代码`)
+        generator.log(`dependencies {`)
+        generator.log(` ...`)
+        generator.log(chalk.redBright(`implementation(projects.feature${lib.libraryNameCU})`))
+        generator.log(` ...`)
+        generator.log(`}`)
+        
+        generator.log(`添加工程kotlin代码...`)
+        
+        generator.log(`3, 在主工程 ${chalk.yellow(extensionConfig.applicationNameCU + 'Application.kt')} 中添加代码`)
+        generator.log(`import ...`)
+        generator.log(chalk.redBright(`import ${extensionConfig.basePackageName}.${lib.libraryName}.feature${lib.libraryNameCU}Modules`))
+        generator.log(`...`)
+        
+        
+        generator.log(`private fun initKoin() {`)
+        generator.log(`...`)
+        generator.log(chalk.redBright(`modules(feature${lib.libraryNameCU}Modules)`))
+        generator.log(`...`)
+        generator.log(`}`)
+
+        
+        
+        generator.log(`4, 若需要在主工程菜单中添加导航`)
+        generator.log(`在主工程 ${chalk.yellow('src/main/res/menu/bottom_nav_menu.xml')} 文件中添加代码`)
+        generator.log(`...`)
+        generator.log(chalk.redBright(`<item android:id="@+id/${lib.libraryName }NavGraph"`))
+        generator.log(chalk.redBright(`android:icon="@drawable/ic_round_dashboard"`))
+        generator.log(chalk.redBright(`android:title="@string/${lib.libraryName}"`))
+        generator.log(`...`)
+        
+        
+        generator.log(`5, 在主工程 ${chalk.yellow('src/main/res/navigation/app_nav_graph.xml')} 文件中添加代码`)
+        generator.log(`...`)
+        generator.log(chalk.redBright(`<include app:graph="@navigation/feature_${lib.libraryName}_nav_graph" />`))
+        generator.log(`...`)
+        
+        generator.log(`6, 资源文件字符串内容 ${chalk.yellow('src/main/res/values/strings.xml')}`)
+        generator.log(`...`)
+        generator.log(chalk.redBright(`<string name="feature_${lib.libraryName}">feature ${lib.libraryName}</string>`))
+        generator.log(chalk.redBright(`<string name="${lib.libraryName}">${lib.libraryNameCU}</string>`))
+        generator.log(`...`)
+      }
+      generator.log('');
     }
   }
 }

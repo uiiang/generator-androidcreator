@@ -3,6 +3,8 @@ rootProject.name = "<%= applicationName %>"
 include(
     ":app",
     ":feature_base",
+    // 在此处添加自定义library
+    // 例如: ":feature_[libraryName]"
 <% librarys.forEach(item=>{ %>
     ":feature_<%= item.libraryName %>",
 <% }) %>

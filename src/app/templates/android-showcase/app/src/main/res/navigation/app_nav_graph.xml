@@ -3,6 +3,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/nav_graph"
         app:startDestination="@id/<%= mainLibraryName %>NavGraph">
+        <!-- 在此处添加自定义模块导航 -->
 <% librarys.forEach(item=>{ %>
     <include app:graph="@navigation/feature_<%= item.libraryName %>_nav_graph" />
 <% }) %>

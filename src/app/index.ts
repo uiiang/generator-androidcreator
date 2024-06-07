@@ -1,6 +1,5 @@
 import yosay from 'yosay';
 import Generator from "yeoman-generator"; // eslint-disable-line @typescript-eslint/no-var-requires
-import * as chalk from 'chalk';
 import { fileURLToPath } from 'url';
 import * as path from 'path';
 import { ChoiceOption, ExtensionConfig } from './common/extension_config.js'
@@ -72,6 +71,14 @@ export default class extends Generator {
     this.sourceRoot(path.join(currentFilename, '../templates/' + this.extensionConfig.type));
 
     return this.extensionGenerator.writing(this, this.extensionConfig);
+  }
+
+  async end() {
+    this.log('生成代码已完成，请检查工程目录下的代码是否正确')
+    this.log('');
+    if (this.extensionGenerator.endMessage) {
+      this.extensionGenerator.endMessage(this, this.extensionConfig);
+    }
   }
 
 }
