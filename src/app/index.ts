@@ -22,7 +22,7 @@ export default class extends Generator {
     // this.extensionConfig = Object.create(null);
     this.extensionConfig = tools.loadProjectInfoJson(this)
 
-    console.log(this.extensionConfig)
+    // console.log(this.extensionConfig)
     this.abort = false;
   }
 
@@ -31,20 +31,24 @@ export default class extends Generator {
   }
 
   async prompting() {
-    const choices: ChoiceOption[] = [];
-    for (const g of extensionGenerators) {
-      choices.push({ name: g.name, value: g.id })
-    }
-    // 选择使用哪个模板
-    this.extensionConfig.type = (await this.prompt({
-      type: 'list',
-      name: 'type',
-      message: 'What template of application do you want to create?',
-      pageSize: choices.length,
-      choices,
-    })).type;
+    if (extensionGenerators.length === 1) {
+      this.extensionGenerator = extensionGenerators[0]
+    } else {
+      const choices: ChoiceOption[] = [];
+      for (const g of extensionGenerators) {
+        choices.push({ name: g.name, value: g.id })
+      }
+      // 选择使用哪个模板
+      this.extensionConfig.type = (await this.prompt({
+        type: 'list',
+        name: 'type',
+        message: 'What template of application do you want to create?',
+        pageSize: choices.length,
+        choices,
+      })).type;
 
-    this.extensionGenerator = extensionGenerators.find(g => g.id === this.extensionConfig.type);
+      this.extensionGenerator = extensionGenerators.find(g => g.id === this.extensionConfig.type);
+    }
     try {
       await this.extensionGenerator.prompting(this, this.extensionConfig);
     } catch (e) {

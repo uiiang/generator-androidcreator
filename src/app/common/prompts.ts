@@ -87,6 +87,8 @@ export async function askForLibraryType(generator: yo, order: number) {
   ]
   if (order > 0) {
     libraryTypeGenerators.push({ name: "不再添加library", value: "exit" })
+  } else {
+    return 'empty'
   }
   const choices: ChoiceOption[] = [];
   for (const g of libraryTypeGenerators) {
