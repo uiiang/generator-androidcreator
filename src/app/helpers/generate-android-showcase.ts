@@ -68,20 +68,9 @@ export default new class GeneratorAndroidShowcase {
       const librarys = extensionConfig.librarys
       generator.log('开始生成自定义library，共', librarys.length, '个')
       // console.log('librarys ', extensionConfig.librarys[0])
-      for (var i = 0; i < librarys.length; i++) {
-        const lib = librarys[i]
-        extensionConfig.idx = i
-        var feature_libraryName = "feature_" + lib.libraryName
-        tools.copyTplLibrary(generator,
-          extensionConfig, 'feature_empty',
-          feature_libraryName,
-          sourcePackageDir + '/empty',
-          packageDir + '/' + lib.libraryName, ['Empty.kt'],
-          [{ source: '/empty/', target: '/' + lib.libraryName + '/' },
-          { source: 'empty', target: lib.libraryName },
-          { source: 'Empty', target: lib.libraryNameCU },
-          { source: 'feature_empty_nav_graph.xml', target: 'feature_' + lib.libraryName + '_nav_graph.xml' }])
-      }
+      this.genCustomLibrary(generator, extensionConfig,sourcePackageDir,packageDir)
+
+      generator.log('开始生成library单元测试库')
       // library单元测试库
       tools.copyTplLibrary(generator, extensionConfig, 'konsist_test', 'konsist_test',
         sourcePackageDir,
@@ -89,6 +78,7 @@ export default new class GeneratorAndroidShowcase {
       tools.copyTplLibrary(generator, extensionConfig, 'library_test_utils', 'library_test_utils',
         sourcePackageDir,
         packageDir, [])
+        generator.log('开始生成工程根目录下的文件')
       // 工程根目录下的文件
       tools.copyTplFileList(generator, extensionConfig, '', '', ['gitignore'])
       tools.copyTpls(generator, extensionConfig,
@@ -99,23 +89,28 @@ export default new class GeneratorAndroidShowcase {
     } else if (this.createType == 'createDatamodel') {
       androidDataModel.writing(generator)
     } else if (this.createType == 'createLibrary') {
-      for (var i = 0; i < this.librarys.length; i++) {
-        const lib = this.librarys[i]
-        extensionConfig.idx = i
-        var feature_libraryName = "feature_" + lib.libraryName
-        tools.copyTplLibrary(generator,
-          extensionConfig, 'feature_empty',
-          feature_libraryName,
-          sourcePackageDir + '/empty',
-          packageDir + '/' + lib.libraryName, ['Empty.kt'],
-          [{ source: '/empty/', target: '/' + lib.libraryName + '/' },
-          { source: 'empty', target: lib.libraryName },
-          { source: 'Empty', target: lib.libraryNameCU },
-          { source: 'feature_empty_nav_graph.xml', target: 'feature_' + lib.libraryName + '_nav_graph.xml' }])
-      }
+      this.genCustomLibrary(generator, extensionConfig,sourcePackageDir,packageDir)
       extensionConfig.librarys = extensionConfig.librarys.concat(this.librarys)
-      console.log('extensionConfig.librarys', extensionConfig.librarys)
+      // console.log('extensionConfig.librarys', extensionConfig.librarys)
       tools.saveProjectInfoJson(generator, extensionConfig)
+    }
+  }
+
+  genCustomLibrary(generator: yo, extensionConfig: ExtensionConfig,
+    sourcePackageDir: string, packageDir: string) {
+    for (var i = 0; i < this.librarys.length; i++) {
+      const lib = this.librarys[i]
+      extensionConfig.idx = i
+      var feature_libraryName = "feature_" + lib.libraryName
+      tools.copyTplLibrary(generator,
+        extensionConfig, 'feature_empty',
+        feature_libraryName,
+        sourcePackageDir + '/empty',
+        packageDir + '/' + lib.libraryName, ['Empty.kt'],
+        [{ source: '/empty/', target: '/' + lib.libraryName + '/' },
+        { source: 'empty', target: lib.libraryName },
+        { source: 'Empty', target: lib.libraryNameCU },
+        { source: 'feature_empty_nav_graph.xml', target: 'feature_' + lib.libraryName + '_nav_graph.xml' }])
     }
   }
 
@@ -127,7 +122,7 @@ export default new class GeneratorAndroidShowcase {
   endMessage(generator: yo, extensionConfig: ExtensionConfig) {
     if (this.createType == 'createLibrary') {
       generator.log(chalk.yellow(`已完成生成library代码`))
-      
+
       for (var i = 0; i < this.librarys.length; i++) {
         const lib = this.librarys[i]
         generator.log(chalk.yellow(`模块名: ${lib.libraryName}`))
@@ -138,44 +133,44 @@ export default new class GeneratorAndroidShowcase {
         generator.log(chalk.redBright(`":feature_${lib.libraryName}",`))
         generator.log(` ...`)
         generator.log(`)`)
-        
+
         generator.log(`2, 在需要引用的模块下的${chalk.yellow('build.gradle.kts')}中添加代码`)
         generator.log(`dependencies {`)
         generator.log(` ...`)
         generator.log(chalk.redBright(`implementation(projects.feature${lib.libraryNameCU})`))
         generator.log(` ...`)
         generator.log(`}`)
-        
+
         generator.log(`添加工程kotlin代码...`)
-        
+
         generator.log(`3, 在主工程 ${chalk.yellow(extensionConfig.applicationNameCU + 'Application.kt')} 中添加代码`)
         generator.log(`import ...`)
         generator.log(chalk.redBright(`import ${extensionConfig.basePackageName}.${lib.libraryName}.feature${lib.libraryNameCU}Modules`))
         generator.log(`...`)
-        
-        
+
+
         generator.log(`private fun initKoin() {`)
         generator.log(`...`)
         generator.log(chalk.redBright(`modules(feature${lib.libraryNameCU}Modules)`))
         generator.log(`...`)
         generator.log(`}`)
 
-        
-        
+
+
         generator.log(`4, 若需要在主工程菜单中添加导航`)
         generator.log(`在主工程 ${chalk.yellow('src/main/res/menu/bottom_nav_menu.xml')} 文件中添加代码`)
         generator.log(`...`)
-        generator.log(chalk.redBright(`<item android:id="@+id/${lib.libraryName }NavGraph"`))
+        generator.log(chalk.redBright(`<item android:id="@+id/${lib.libraryName}NavGraph"`))
         generator.log(chalk.redBright(`android:icon="@drawable/ic_round_dashboard"`))
         generator.log(chalk.redBright(`android:title="@string/${lib.libraryName}"`))
         generator.log(`...`)
-        
-        
+
+
         generator.log(`5, 在主工程 ${chalk.yellow('src/main/res/navigation/app_nav_graph.xml')} 文件中添加代码`)
         generator.log(`...`)
         generator.log(chalk.redBright(`<include app:graph="@navigation/feature_${lib.libraryName}_nav_graph" />`))
         generator.log(`...`)
-        
+
         generator.log(`6, 资源文件字符串内容 ${chalk.yellow('src/main/res/values/strings.xml')}`)
         generator.log(`...`)
         generator.log(chalk.redBright(`<string name="feature_${lib.libraryName}">feature ${lib.libraryName}</string>`))
