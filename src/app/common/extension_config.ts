@@ -7,7 +7,12 @@ export interface ExtensionConfig {
   mainLibraryNameUAll: string,
   librarys: LibraryObj[],
   type: any,
-  idx: number
+  idx: number,
+  dataModelSourceType: string,
+  dataModelFilePath: string,
+  dataModelBaseClassName: string,
+  dataModelSource: string,
+  dataModelPackageName: string
 }
 export interface LibraryObj {
   order: string,

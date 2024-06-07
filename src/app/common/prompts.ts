@@ -106,3 +106,93 @@ export async function askForLibraryInfo(generator: yo, extensionConfig: Extensio
   // generator.log(librarys[1])
   extensionConfig.librarys = librarys
 }
+
+export async function askForDataModelSourceType(generator: yo, extensionConfig: ExtensionConfig) {
+  const dataSourceType = [
+    { name: "json data example", value: "data" },
+    { name: "json schema", value: "schema" }
+  ]
+  const choices: ChoiceOption[] = [];
+  for (const g of dataSourceType) {
+    choices.push({ name: g.name, value: g.value })
+  }
+  return generator.prompt({
+    type: 'list',
+    name: 'dataModelSourceType',
+    message: '选择生成datamodel的数据源类型?',
+    default: 'data',
+    pageSize: choices.length,
+    choices,
+  }).then(selectedTypeAnswer => {
+    extensionConfig.dataModelSourceType = selectedTypeAnswer.dataModelSourceType
+  });
+}
+
+
+/**
+ * 输入生成data model数据源文件路径
+* @param {Generator} generator
+*/
+export function askForDataModelSourcePath(generator: yo, extensionConfig: ExtensionConfig) {
+  return generator.prompt({
+    type: 'input',
+    name: 'dataModelFilePath',
+    message: '输入生成data model数据源文件路径',
+    // validate: validator.validateExtensionId
+  }).then(selectedTypeAnswer => {
+    extensionConfig.dataModelFilePath = selectedTypeAnswer.dataModelFilePath
+  });
+}
+
+
+/**
+ * 输入生成data model最外层类类名
+* @param {Generator} generator
+*/
+export function askForDataModelBaseClassName(generator: yo, extensionConfig: ExtensionConfig) {
+  return generator.prompt({
+    type: 'input',
+    name: 'dataModelBaseClassName',
+    message: '输入生成data model最外层类类名',
+    // validate: validator.validateExtensionId
+  }).then(selectedTypeAnswer => {
+    extensionConfig.dataModelBaseClassName = selectedTypeAnswer.dataModelBaseClassName
+  });
+}
+
+/**
+ * Ask for datamodel package name
+* @param {Generator} generator
+* @param {Object} extensionConfig
+*/
+export function askForDataModelPackageName(generator: yo, extensionConfig: ExtensionConfig) {
+  let def = "com." + extensionConfig.applicationName;
+  return generator.prompt({
+    type: 'input',
+    name: 'dataModelPackageName',
+    message: 'What\'s the package name of your data model?',
+    default: def || '',
+    // validate: validator.validateExtensionId
+  }).then(dataModelPackageNameAnswer => {
+    extensionConfig.dataModelPackageName = dataModelPackageNameAnswer.dataModelPackageName;
+  });
+}
+
+
+/**
+ * 输入datamodel所属的library文件夹路径，用于保存datamodel文件
+ * 会自动保存到该library下的\src\main\kotlin\[libraryPackageName]\domain\model目录中
+* @param {Generator} generator
+* @param {Object} extensionConfig
+*/
+export function askForDataModelLibraryPath(generator: yo, extensionConfig: ExtensionConfig) {
+  return generator.prompt({
+    type: 'input',
+    name: 'dataModelPackageName',
+    message: 'What\'s the package name of your data model?',
+    store: true
+    // validate: validator.validateExtensionId
+  }).then(dataModelPackageNameAnswer => {
+    extensionConfig.dataModelPackageName = dataModelPackageNameAnswer.dataModelPackageName;
+  });
+}

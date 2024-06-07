@@ -1,0 +1,1459 @@
+{
+	"results": {
+		"opensearch:Query": {
+			"#text": "",
+			"role": "request",
+			"searchTerms": "Jackson",
+			"startPage": "1"
+		},
+		"opensearch:totalResults": "639086",
+		"opensearch:startIndex": "0",
+		"opensearch:itemsPerPage": "60",
+		"albummatches": {
+			"album": [{
+					"name": "The Essential Michael Jackson",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/The+Essential+Michael+Jackson",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/36577e77dabeb2aed157e98c8924d436.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/36577e77dabeb2aed157e98c8924d436.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/36577e77dabeb2aed157e98c8924d436.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/36577e77dabeb2aed157e98c8924d436.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "34725eea-3352-4e0e-9fc0-c40776fdf3bc"
+				},
+				{
+					"name": "Michael Jackson's This Is It",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Michael+Jackson%27s+This+Is+It",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/b1bf13ec616843f98e55e00ee443d68b.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/b1bf13ec616843f98e55e00ee443d68b.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/b1bf13ec616843f98e55e00ee443d68b.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b1bf13ec616843f98e55e00ee443d68b.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Thriller",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Thriller",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/e5f40ae3767cf5b6184776f97e52b8ca.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/e5f40ae3767cf5b6184776f97e52b8ca.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/e5f40ae3767cf5b6184776f97e52b8ca.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/e5f40ae3767cf5b6184776f97e52b8ca.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "9774b815-8ffa-4fd2-8eb5-c25539322a77"
+				},
+				{
+					"name": "Bo Jackson",
+					"artist": "Boldy James",
+					"url": "https://www.last.fm/music/Boldy+James/Bo+Jackson",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/7e5a263698e5651123c32d9fa4debd84.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/7e5a263698e5651123c32d9fa4debd84.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/7e5a263698e5651123c32d9fa4debd84.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/7e5a263698e5651123c32d9fa4debd84.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Thriller 25 Super Deluxe Edition",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Thriller+25+Super+Deluxe+Edition",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/481470eff66c4ffecfaf28b375c11041.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/481470eff66c4ffecfaf28b375c11041.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/481470eff66c4ffecfaf28b375c11041.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/481470eff66c4ffecfaf28b375c11041.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Off the Wall",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Off+the+Wall",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/319c5ce98b195fd812e541c7f9dcfa3e.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/319c5ce98b195fd812e541c7f9dcfa3e.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/319c5ce98b195fd812e541c7f9dcfa3e.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/319c5ce98b195fd812e541c7f9dcfa3e.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "6258e39d-bef4-4d5a-a654-440cf4c4c29a"
+				},
+				{
+					"name": "Diana Ross Presents the Jackson 5",
+					"artist": "The Jackson 5",
+					"url": "https://www.last.fm/music/The+Jackson+5/Diana+Ross+Presents+the+Jackson+5",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/77cef2848f424752b83d98bcd0802dfb.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/77cef2848f424752b83d98bcd0802dfb.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/77cef2848f424752b83d98bcd0802dfb.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/77cef2848f424752b83d98bcd0802dfb.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "19118d73-2e80-4c7b-9b88-4d1fa34c3f26"
+				},
+				{
+					"name": "Jackson C. Frank (2001 Remastered Version)",
+					"artist": "Jackson C. Frank",
+					"url": "https://www.last.fm/music/Jackson+C.+Frank/Jackson+C.+Frank+(2001+Remastered+Version)",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/2a9a06f39dc5ca0a4057a2269fa2ddd0.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/2a9a06f39dc5ca0a4057a2269fa2ddd0.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/2a9a06f39dc5ca0a4057a2269fa2ddd0.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2a9a06f39dc5ca0a4057a2269fa2ddd0.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Dangerous",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Dangerous",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/81d027edbd268b0b7384f588fbae047c.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/81d027edbd268b0b7384f588fbae047c.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/81d027edbd268b0b7384f588fbae047c.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/81d027edbd268b0b7384f588fbae047c.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "ae5efacd-f75f-432a-9f22-b35d3169d21f"
+				},
+				{
+					"name": "XSCAPE",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/XSCAPE",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/b366cff64b1e4757c7f64e117142baa5.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/b366cff64b1e4757c7f64e117142baa5.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/b366cff64b1e4757c7f64e117142baa5.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b366cff64b1e4757c7f64e117142baa5.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "11628a0e-99ad-433b-9259-6de49e72ca24"
+				},
+				{
+					"name": "Bad 25th Anniversary",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Bad+25th+Anniversary",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/3a1224fa5a5735a9a0f92391c4bda67c.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/3a1224fa5a5735a9a0f92391c4bda67c.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/3a1224fa5a5735a9a0f92391c4bda67c.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/3a1224fa5a5735a9a0f92391c4bda67c.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "HIStory - Past, Present And Future - Book I",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/HIStory+-+Past,+Present+And+Future+-+Book+I",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/124d91edf558a82a897dbd4c798fdaca.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/124d91edf558a82a897dbd4c798fdaca.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/124d91edf558a82a897dbd4c798fdaca.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/124d91edf558a82a897dbd4c798fdaca.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Invincible",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Invincible",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/f1ff579fcb17d6c760104e85e08769f4.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/f1ff579fcb17d6c760104e85e08769f4.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/f1ff579fcb17d6c760104e85e08769f4.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/f1ff579fcb17d6c760104e85e08769f4.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "674770c9-a97c-4f93-a36d-0014ef86f20f"
+				},
+				{
+					"name": "Jackson Browne (Saturate Before Using)",
+					"artist": "Jackson Browne",
+					"url": "https://www.last.fm/music/Jackson+Browne/Jackson+Browne+(Saturate+Before+Using)",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/44bfec9607a54b85cb17e9bb8afb1b1b.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/44bfec9607a54b85cb17e9bb8afb1b1b.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/44bfec9607a54b85cb17e9bb8afb1b1b.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/44bfec9607a54b85cb17e9bb8afb1b1b.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Michael Jackson: The Ultimate Collection",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Michael+Jackson:+The+Ultimate+Collection",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/ddec14e9485d0dede872650f4093c041.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/ddec14e9485d0dede872650f4093c041.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/ddec14e9485d0dede872650f4093c041.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/ddec14e9485d0dede872650f4093c041.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "The Velvet Rope",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/The+Velvet+Rope",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/507a2272e2152d17b56dc2c2199f8670.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/507a2272e2152d17b56dc2c2199f8670.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/507a2272e2152d17b56dc2c2199f8670.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/507a2272e2152d17b56dc2c2199f8670.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "5c0f94d0-6e7c-4547-bf52-eba96b14e3d3"
+				},
+				{
+					"name": "Anthology: Jackson 5",
+					"artist": "The Jackson 5",
+					"url": "https://www.last.fm/music/The+Jackson+5/Anthology:+Jackson+5",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/2b141112244fec09d7dbf1feaad82181.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/2b141112244fec09d7dbf1feaad82181.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/2b141112244fec09d7dbf1feaad82181.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2b141112244fec09d7dbf1feaad82181.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Jacksonville City Nights",
+					"artist": "Ryan Adams & The Cardinals",
+					"url": "https://www.last.fm/music/Ryan+Adams+&+The+Cardinals/Jacksonville+City+Nights",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/82d31e1990905106a71ce1a8bca30bff.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/82d31e1990905106a71ce1a8bca30bff.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/82d31e1990905106a71ce1a8bca30bff.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/82d31e1990905106a71ce1a8bca30bff.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "defa1d7d-348e-4398-a155-1a3229201972"
+				},
+				{
+					"name": "Number Ones",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Number+Ones",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/e92212e6b54542192ed79568a022f1dd.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/e92212e6b54542192ed79568a022f1dd.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/e92212e6b54542192ed79568a022f1dd.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/e92212e6b54542192ed79568a022f1dd.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "724049b1-c305-4968-9faf-3aae776183b1"
+				},
+				{
+					"name": "Bad",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Bad",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/8860bfd3ea86680bac8cb2decae33f06.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/8860bfd3ea86680bac8cb2decae33f06.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/8860bfd3ea86680bac8cb2decae33f06.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/8860bfd3ea86680bac8cb2decae33f06.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "bcf7537d-6b5d-4987-b022-074215f3f9fa"
+				},
+				{
+					"name": "Ms. Jackson",
+					"artist": "PASHANIM",
+					"url": "https://www.last.fm/music/PASHANIM/Ms.+Jackson",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/6d398f25ecb7fd58b69bc45787d77f60.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/6d398f25ecb7fd58b69bc45787d77f60.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/6d398f25ecb7fd58b69bc45787d77f60.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/6d398f25ecb7fd58b69bc45787d77f60.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Jackson C. Frank",
+					"artist": "Jackson C. Frank",
+					"url": "https://www.last.fm/music/Jackson+C.+Frank/Jackson+C.+Frank",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/cb73daead1b1ba61e951320de16c9659.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/cb73daead1b1ba61e951320de16c9659.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/cb73daead1b1ba61e951320de16c9659.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/cb73daead1b1ba61e951320de16c9659.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "83d2ab3f-e4c4-4593-8834-40f269baedfe"
+				},
+				{
+					"name": "Bad (Remastered)",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Bad+(Remastered)",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/7b99660593d36842212fe10e7ec6a7ef.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/7b99660593d36842212fe10e7ec6a7ef.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/7b99660593d36842212fe10e7ec6a7ef.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/7b99660593d36842212fe10e7ec6a7ef.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Jackson Square",
+					"artist": "Arkells",
+					"url": "https://www.last.fm/music/Arkells/Jackson+Square",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/01f294b616014498c49e3998ea24fb7c.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/01f294b616014498c49e3998ea24fb7c.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/01f294b616014498c49e3998ea24fb7c.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/01f294b616014498c49e3998ea24fb7c.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "deb3e7c3-00ec-494c-bc90-af3dda282446"
+				},
+				{
+					"name": "magic man",
+					"artist": "jackson wang",
+					"url": "https://www.last.fm/music/jackson+wang/magic+man",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/ed0c0e74acfb262ceb43b949e04ee51c.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/ed0c0e74acfb262ceb43b949e04ee51c.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/ed0c0e74acfb262ceb43b949e04ee51c.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/ed0c0e74acfb262ceb43b949e04ee51c.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Janet",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/Janet",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/fa3b614f848b6723e2f2689ddc961c57.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/fa3b614f848b6723e2f2689ddc961c57.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/fa3b614f848b6723e2f2689ddc961c57.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/fa3b614f848b6723e2f2689ddc961c57.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "309015a1-22da-4903-b4e0-d6d166534bc4"
+				},
+				{
+					"name": "Rhythm Nation 1814",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/Rhythm+Nation+1814",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/3b4404990104a23c37a9650607743c3b.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/3b4404990104a23c37a9650607743c3b.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/3b4404990104a23c37a9650607743c3b.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/3b4404990104a23c37a9650607743c3b.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "114ea1ec-d529-4c71-9ac7-a5a4aa13fcbd"
+				},
+				{
+					"name": "All for You",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/All+for+You",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/390d69b4e0de29303734c43f0163f56a.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/390d69b4e0de29303734c43f0163f56a.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/390d69b4e0de29303734c43f0163f56a.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/390d69b4e0de29303734c43f0163f56a.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "252cc247-cdf2-446d-9d32-b89de808d0be"
+				},
+				{
+					"name": "Scream",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Scream",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/77db89f1e53e013c1b226d0a1796b64a.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/77db89f1e53e013c1b226d0a1796b64a.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/77db89f1e53e013c1b226d0a1796b64a.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/77db89f1e53e013c1b226d0a1796b64a.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "9b585188-ada6-4f0e-bd61-c7a68ae4dceb"
+				},
+				{
+					"name": "Control",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/Control",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/07a19ceed67edc88febd1ec4c11417ca.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/07a19ceed67edc88febd1ec4c11417ca.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/07a19ceed67edc88febd1ec4c11417ca.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/07a19ceed67edc88febd1ec4c11417ca.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "c8b74746-7b9e-436e-b021-c16b6dc42481"
+				},
+				{
+					"name": "Jackson C. Frank (2001 - Remaster)",
+					"artist": "Jackson C. Frank",
+					"url": "https://www.last.fm/music/Jackson+C.+Frank/Jackson+C.+Frank+(2001+-+Remaster)",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/71cf4da22996eb97ffd95ab1c8cbb0cf.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/71cf4da22996eb97ffd95ab1c8cbb0cf.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/71cf4da22996eb97ffd95ab1c8cbb0cf.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/71cf4da22996eb97ffd95ab1c8cbb0cf.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "People That Can Eat People Are the Luckiest People in the World",
+					"artist": "Andrew Jackson Jihad",
+					"url": "https://www.last.fm/music/Andrew+Jackson+Jihad/People+That+Can+Eat+People+Are+the+Luckiest+People+in+the+World",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/e5c8797164ce4d71cd87334fe61b797a.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/e5c8797164ce4d71cd87334fe61b797a.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/e5c8797164ce4d71cd87334fe61b797a.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/e5c8797164ce4d71cd87334fe61b797a.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "565cdcdb-e066-4eb4-871c-fa252dc850cf"
+				},
+				{
+					"name": "Jackson C Frank",
+					"artist": "Jackson C. Frank",
+					"url": "https://www.last.fm/music/Jackson+C.+Frank/Jackson+C+Frank",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/021c9bea157227096705ec035fae1535.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/021c9bea157227096705ec035fae1535.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/021c9bea157227096705ec035fae1535.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/021c9bea157227096705ec035fae1535.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "LMLY",
+					"artist": "jackson wang",
+					"url": "https://www.last.fm/music/jackson+wang/LMLY",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/e2b239884aa801d7cea25067d5f275be.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/e2b239884aa801d7cea25067d5f275be.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/e2b239884aa801d7cea25067d5f275be.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/e2b239884aa801d7cea25067d5f275be.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Jackson Five Christmas Album",
+					"artist": "The Jackson 5",
+					"url": "https://www.last.fm/music/The+Jackson+5/Jackson+Five+Christmas+Album",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/b9bee0ad75f9976addd0cd731ba7dc67.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/b9bee0ad75f9976addd0cd731ba7dc67.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/b9bee0ad75f9976addd0cd731ba7dc67.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/b9bee0ad75f9976addd0cd731ba7dc67.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Damita Jo",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/Damita+Jo",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/fa08e3a6f44c484dba4794fedb436b86.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/fa08e3a6f44c484dba4794fedb436b86.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/fa08e3a6f44c484dba4794fedb436b86.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/fa08e3a6f44c484dba4794fedb436b86.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "48d2a513-954c-36bc-9dcc-5f34f8bf5aa2"
+				},
+				{
+					"name": "Andrew Jackson Jihad/Ghost Mice Split",
+					"artist": "Andrew Jackson Jihad",
+					"url": "https://www.last.fm/music/Andrew+Jackson+Jihad/Andrew+Jackson+Jihad%2FGhost+Mice+Split",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/1d5d4b0a59ab455eb12d3f2ce295b290.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/1d5d4b0a59ab455eb12d3f2ce295b290.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/1d5d4b0a59ab455eb12d3f2ce295b290.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/1d5d4b0a59ab455eb12d3f2ce295b290.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "MIRRORS",
+					"artist": "jackson wang",
+					"url": "https://www.last.fm/music/jackson+wang/MIRRORS",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/3b91d15dcd00240f357eb4bd858c85af.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/3b91d15dcd00240f357eb4bd858c85af.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/3b91d15dcd00240f357eb4bd858c85af.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/3b91d15dcd00240f357eb4bd858c85af.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Discipline",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/Discipline",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/8f6fc6433c0d3ea1d480fa30a3563fe3.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/8f6fc6433c0d3ea1d480fa30a3563fe3.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/8f6fc6433c0d3ea1d480fa30a3563fe3.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/8f6fc6433c0d3ea1d480fa30a3563fe3.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "68ed4767-283b-4281-aa42-75e01b9abbec"
+				},
+				{
+					"name": "Christmas Album",
+					"artist": "The Jackson 5",
+					"url": "https://www.last.fm/music/The+Jackson+5/Christmas+Album",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/fadab111e1dd99854550ce67f879b0ce.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/fadab111e1dd99854550ce67f879b0ce.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/fadab111e1dd99854550ce67f879b0ce.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/fadab111e1dd99854550ce67f879b0ce.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "d9b7229c-7dd5-4f5e-b51a-00f042a4ea1c"
+				},
+				{
+					"name": "Michael",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/Michael",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/03afd3e664a00601f6fb247c358a4051.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/03afd3e664a00601f6fb247c358a4051.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/03afd3e664a00601f6fb247c358a4051.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/03afd3e664a00601f6fb247c358a4051.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "d0948296-304c-4b51-8f59-a9248a5bdfb5"
+				},
+				{
+					"name": "100 Ways",
+					"artist": "jackson wang",
+					"url": "https://www.last.fm/music/jackson+wang/100+Ways",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/3125b7e9858dea945619937874d71e10.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/3125b7e9858dea945619937874d71e10.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/3125b7e9858dea945619937874d71e10.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/3125b7e9858dea945619937874d71e10.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Destiny",
+					"artist": "The Jacksons",
+					"url": "https://www.last.fm/music/The+Jacksons/Destiny",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/dbb81aaf9df461848e6f475663a84828.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/dbb81aaf9df461848e6f475663a84828.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/dbb81aaf9df461848e6f475663a84828.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/dbb81aaf9df461848e6f475663a84828.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "6a34d2d1-b8e8-423e-945b-0382d610ab80"
+				},
+				{
+					"name": "The Jacksons",
+					"artist": "The Jacksons",
+					"url": "https://www.last.fm/music/The+Jacksons/The+Jacksons",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/c2a1307a07644e2b8372043b55804d28.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/c2a1307a07644e2b8372043b55804d28.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/c2a1307a07644e2b8372043b55804d28.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/c2a1307a07644e2b8372043b55804d28.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "77255e04-2f3e-4815-b4d9-75b2fe937714"
+				},
+				{
+					"name": "Jermaine Jackson (Expanded Edition)",
+					"artist": "Jermaine Jackson",
+					"url": "https://www.last.fm/music/Jermaine+Jackson/Jermaine+Jackson+(Expanded+Edition)",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/44e9f98b2898c0929ad377b40cf29426.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/44e9f98b2898c0929ad377b40cf29426.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/44e9f98b2898c0929ad377b40cf29426.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/44e9f98b2898c0929ad377b40cf29426.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "The Essential Jacksons",
+					"artist": "The Jacksons",
+					"url": "https://www.last.fm/music/The+Jacksons/The+Essential+Jacksons",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/af569dd4f6379758116deae8f2280252.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/af569dd4f6379758116deae8f2280252.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/af569dd4f6379758116deae8f2280252.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/af569dd4f6379758116deae8f2280252.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "f4944223-5a51-432a-96d5-863a40f70906"
+				},
+				{
+					"name": "The Very Best of Jackson Browne",
+					"artist": "Jackson Browne",
+					"url": "https://www.last.fm/music/Jackson+Browne/The+Very+Best+of+Jackson+Browne",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/7d65f6a296454258ad7807f173d5ad53.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/7d65f6a296454258ad7807f173d5ad53.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/7d65f6a296454258ad7807f173d5ad53.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/7d65f6a296454258ad7807f173d5ad53.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "ccc78a3f-8820-4ce3-9e9d-d96fa99db6c3"
+				},
+				{
+					"name": "History",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/History",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/c2a349ad619e4aa0ca2cd57c0f789fce.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/c2a349ad619e4aa0ca2cd57c0f789fce.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/c2a349ad619e4aa0ca2cd57c0f789fce.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/c2a349ad619e4aa0ca2cd57c0f789fce.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "921cbb41-67e8-4f0e-8ff3-be97ead76f46"
+				},
+				{
+					"name": "Can't Maintain",
+					"artist": "Andrew Jackson Jihad",
+					"url": "https://www.last.fm/music/Andrew+Jackson+Jihad/Can%27t+Maintain",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/1b2d13a1d717371fa8996f4c5e6c4814.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/1b2d13a1d717371fa8996f4c5e6c4814.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/1b2d13a1d717371fa8996f4c5e6c4814.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/1b2d13a1d717371fa8996f4c5e6c4814.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "638b8b03-2b7a-407c-bd76-54b925c4fe6c"
+				},
+				{
+					"name": "Jackson Browne",
+					"artist": "Jackson Browne",
+					"url": "https://www.last.fm/music/Jackson+Browne/Jackson+Browne",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/a6d03a0c4f3e1a52c8beb60514982cf5.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/a6d03a0c4f3e1a52c8beb60514982cf5.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/a6d03a0c4f3e1a52c8beb60514982cf5.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/a6d03a0c4f3e1a52c8beb60514982cf5.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "0a95ef41-da98-4371-b014-1ac433f9d5f0"
+				},
+				{
+					"name": "ABC",
+					"artist": "The Jackson 5",
+					"url": "https://www.last.fm/music/The+Jackson+5/ABC",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/dabfed136cf64f93cf05e6354f3b24e0.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/dabfed136cf64f93cf05e6354f3b24e0.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/dabfed136cf64f93cf05e6354f3b24e0.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/dabfed136cf64f93cf05e6354f3b24e0.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "3f423bcc-f834-41fd-b35e-c9ed9036b2d7"
+				},
+				{
+					"name": "Knife Man",
+					"artist": "Andrew Jackson Jihad",
+					"url": "https://www.last.fm/music/Andrew+Jackson+Jihad/Knife+Man",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/7107acd46e004573b9c4bab83061a576.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/7107acd46e004573b9c4bab83061a576.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/7107acd46e004573b9c4bab83061a576.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/7107acd46e004573b9c4bab83061a576.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "fa8d8a58-ab97-49c4-950d-2107715f5484"
+				},
+				{
+					"name": "BLOOD ON THE DANCE FLOOR/ HIStory In The Mix",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/BLOOD+ON+THE+DANCE+FLOOR%2F+HIStory+In+The+Mix",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/ce9587be0863902bc9e9fa1c16aca122.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/ce9587be0863902bc9e9fa1c16aca122.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/ce9587be0863902bc9e9fa1c16aca122.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/ce9587be0863902bc9e9fa1c16aca122.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Wanda Jackson",
+					"artist": "Wanda Jackson",
+					"url": "https://www.last.fm/music/Wanda+Jackson/Wanda+Jackson",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/fa6644e2aa82473980e13159840f99ca.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/fa6644e2aa82473980e13159840f99ca.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/fa6644e2aa82473980e13159840f99ca.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/fa6644e2aa82473980e13159840f99ca.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Animal Kingdom: Jackson",
+					"artist": "Cavetown",
+					"url": "https://www.last.fm/music/Cavetown/Animal+Kingdom:+Jackson",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/0ab013eeab39e9e09e4ab75847256428.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/0ab013eeab39e9e09e4ab75847256428.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/0ab013eeab39e9e09e4ab75847256428.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/0ab013eeab39e9e09e4ab75847256428.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "Unbreakable",
+					"artist": "Janet Jackson",
+					"url": "https://www.last.fm/music/Janet+Jackson/Unbreakable",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/81d1e3c5418c3deb6765de80fedbc83b.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/81d1e3c5418c3deb6765de80fedbc83b.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/81d1e3c5418c3deb6765de80fedbc83b.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/81d1e3c5418c3deb6765de80fedbc83b.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "King of Pop",
+					"artist": "Michael Jackson",
+					"url": "https://www.last.fm/music/Michael+Jackson/King+of+Pop",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/faa9428dbaae06df346a8577e697f7f0.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/faa9428dbaae06df346a8577e697f7f0.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/faa9428dbaae06df346a8577e697f7f0.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/faa9428dbaae06df346a8577e697f7f0.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "c566050f-836c-3245-abbd-47d42106523c"
+				},
+				{
+					"name": "Jackson (feat. Orville Peck)",
+					"artist": "Trixie Mattel",
+					"url": "https://www.last.fm/music/Trixie+Mattel/Jackson+(feat.+Orville+Peck)",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/af88caa28a7c82df98e88976d4a23fce.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/af88caa28a7c82df98e88976d4a23fce.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/af88caa28a7c82df98e88976d4a23fce.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/af88caa28a7c82df98e88976d4a23fce.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				},
+				{
+					"name": "34 Number Ones",
+					"artist": "Alan Jackson",
+					"url": "https://www.last.fm/music/Alan+Jackson/34+Number+Ones",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/ebd16d3964af45e1ad76b7ac78a3ddee.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/ebd16d3964af45e1ad76b7ac78a3ddee.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/ebd16d3964af45e1ad76b7ac78a3ddee.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/ebd16d3964af45e1ad76b7ac78a3ddee.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": "f092b7dc-f36f-4431-8e38-0a411450bb31"
+				},
+				{
+					"name": "The Next Voice You Hear - The Best Of Jackson Browne",
+					"artist": "Jackson Browne",
+					"url": "https://www.last.fm/music/Jackson+Browne/The+Next+Voice+You+Hear+-+The+Best+Of+Jackson+Browne",
+					"image": [{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/34s/e18f33e30a249026b3d8a9def657cc67.png",
+							"size": "small"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/64s/e18f33e30a249026b3d8a9def657cc67.png",
+							"size": "medium"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/174s/e18f33e30a249026b3d8a9def657cc67.png",
+							"size": "large"
+						},
+						{
+							"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/e18f33e30a249026b3d8a9def657cc67.png",
+							"size": "extralarge"
+						}
+					],
+					"streamable": "0",
+					"mbid": ""
+				}
+			]
+		},
+		"@attr": {
+			"for": "Jackson"
+		}
+	}
+}

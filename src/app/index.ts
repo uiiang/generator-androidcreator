@@ -6,9 +6,10 @@ import * as path from 'path';
 import { ChoiceOption, ExtensionConfig } from './common/extension_config.js'
 
 import androidShowcase from './helpers/generate-android-showcase.js'
+import androidDataModel from './helpers/generate-android-datamodel.js'
 
 const extensionGenerators = [
-  androidShowcase
+  androidShowcase, androidDataModel
 ]
 
 export default class extends Generator {

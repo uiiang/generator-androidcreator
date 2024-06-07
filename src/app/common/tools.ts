@@ -2,6 +2,16 @@ import * as fs from 'fs';
 import * as path from 'path';
 import yo from 'yeoman-generator';
 import { ExtensionConfig, Replace } from './extension_config.js';
+import Type from 'type-of-is'
+import {
+  quicktype,
+  InputData,
+  jsonInputForTargetLanguage,
+  JSONSchemaInput,
+  JSONSchemaSourceData,
+  FetchingJSONSchemaStore,
+  quicktypeMultiFile,
+} from "quicktype-core";
 
 export function toUpperCase(str: string) {
   console.log("toUpperCase", str)
@@ -76,9 +86,40 @@ export function getAllFile(scanPath: string) {
   return res;
 }
 
+function loadJsonToMap(josnData: any) {
+  const keys = Object.entries(josnData)
+  for (const [key, value] of keys) {
+    var type = getPropertyType(value)
+    console.log('Key', key, 'type', type, 'value', value)
+    if (type === 'object') {
+      loadJsonToMap(value)
+    }
+  }
+}
+export function convertSchemaToData(josnData: {}) {
+  loadJsonToMap(josnData)
+}
 
-export function copyTplFileList(generator: yo, scanPath: string
-  , destinationPath: string, extensionConfig: ExtensionConfig,
+
+function getPropertyType(value: any) {
+  var type = Type.string(value).toLowerCase()
+  if (type === 'number') {
+    if (Number.isInteger(value)) {
+      return 'Long'
+    } else {
+      return 'Double'
+    }
+  }
+  if (type === 'date') return 'String'
+  if (type === 'regexp') return 'String'
+  if (type === 'function') return 'String'
+  if (type === 'string') return 'String'
+
+  return type
+}
+
+export function copyTplFileList(generator: yo, extensionConfig: ExtensionConfig, scanPath: string
+  , destinationPath: string,
   exclude: string[] = []) {
   const destPath = destinationPath.length > 0 ? destinationPath + '/' : ''
   const sourcePath = scanPath.length > 0 ? scanPath + '/' : ''
@@ -94,8 +135,8 @@ export function copyTplFileList(generator: yo, scanPath: string
   // generator.log('==============================')
 }
 
-export function copyTplDir(generator: yo, scanPath: string
-  , destinationPath: string, extensionConfig: ExtensionConfig,
+export function copyTplDir(generator: yo, extensionConfig: ExtensionConfig, scanPath: string
+  , destinationPath: string,
   exclude: string[] = []) {
   const destPath = destinationPath.length > 0 ? destinationPath + '/' : ''
   const sourcePath = scanPath.length > 0 ? scanPath + '/' : ''
@@ -106,9 +147,18 @@ export function copyTplDir(generator: yo, scanPath: string
     })
 }
 
-export function copyTplLibrary(generator: yo, scanPath: string,
-  destinationPath: string, sourcePackageDir: string, targetPackageDir: string,
-  extensionConfig: ExtensionConfig, exclude: string[] = [], replace: Replace[] = []) {
+export function copyTpls(generator: yo,
+  extensionConfig: ExtensionConfig, replace: Replace[] = []) {
+  replace.forEach(function (rep) {
+    generator.fs.copyTpl(generator.templatePath(rep.source),
+      generator.destinationPath(rep.target),
+      extensionConfig);
+  })
+}
+
+export function copyTplLibrary(generator: yo,
+  extensionConfig: ExtensionConfig, scanPath: string,
+  destinationPath: string, sourcePackageDir: string, targetPackageDir: string, exclude: string[] = [], replace: Replace[] = []) {
   generator.log('开始生成library', destinationPath)
   // generator.log('targetPackageDir', targetPackageDir)
   const destPath = destinationPath.length > 0 ? destinationPath + '/' : '/'
@@ -116,22 +166,61 @@ export function copyTplLibrary(generator: yo, scanPath: string,
   // convertPath(generator.templatePath(scanPath))
   getAllFile(generator.templatePath(scanPath)).filter((item) => {
     return exclude.indexOf(path.basename(item)) < 0
-  })
-    .forEach(item => {
-      // generator.log('copyTplLibrary before',item)
-      var savePath = item.replace(convertPath(sourcePackageDir), convertPath(targetPackageDir))
-      replace.forEach(function (rep) {
-        // console.log('rep', rep.source, 'item',path.basename(savePath))
-        // if (rep.source == path.basename(savePath)) {
-        savePath = savePath.replace(rep.source, rep.target)
-        // }
-      })
-      // generator.log('copyTplLibrary item',item)
-      // generator.log('copyTplLibrary after',savePath)
-      // generator.log('copyTplLibrary template',generator.templatePath(sourcePath+item))
-      // generator.log('copyTplLibrary destpath',generator.destinationPath(destPath+savePath))
-      generator.fs.copyTpl(generator.templatePath(sourcePath + item),
-        generator.destinationPath(destPath + savePath), extensionConfig);
+  }).forEach(item => {
+    // generator.log('copyTplLibrary before',item)
+    var savePath = item.replace(convertPath(sourcePackageDir), convertPath(targetPackageDir))
+    replace.forEach(function (rep) {
+      // console.log('rep', rep.source, 'item',path.basename(savePath))
+      // if (rep.source == path.basename(savePath)) {
+      savePath = savePath.replace(rep.source, rep.target)
+      // }
     })
-  // generator.log('==============================')
+    // generator.log('copyTplLibrary item',item)
+    // generator.log('copyTplLibrary after',savePath)
+    // generator.log('copyTplLibrary template',generator.templatePath(sourcePath+item))
+    // generator.log('copyTplLibrary destpath',generator.destinationPath(destPath+savePath))
+    generator.fs.copyTpl(generator.templatePath(sourcePath + item),
+      generator.destinationPath(destPath + savePath), extensionConfig);
+  })
+}
+
+export async function loadDataModelSource(dataModelFilePath: string,
+  dataModelSourceType: string,
+  dataModelPackageName: string,
+  dataModelBaseClassName: string): Promise<string> {
+  const options = {
+    lang: 'kotlin',
+    inferEnums: false,
+    inferMaps: false,
+    inferUuids: false,
+    rendererOptions: {
+      "framework": 'just-types',
+      'package': dataModelPackageName
+    },
+    outputFilename: dataModelBaseClassName + '.kt'
+  }
+  const sourceContent = fs.readFileSync(dataModelFilePath)
+  if (dataModelSourceType == 'schema') {
+    const jsonInput = new JSONSchemaInput(new FetchingJSONSchemaStore());
+    await jsonInput.addSource({
+      name: dataModelBaseClassName,
+      schema: sourceContent.toString()
+    })
+    const inputData = new InputData()
+    inputData.addInput(jsonInput)
+    options['inputData'] = inputData
+    return (await quicktype(options)).lines.join("\n")
+  } else if (dataModelSourceType == 'data') {
+    const jsonInput = jsonInputForTargetLanguage('kotlin')
+    await jsonInput.addSource({
+      name: dataModelBaseClassName,
+      samples: [sourceContent.toString()]
+    });
+    const inputData = new InputData();
+    inputData.addInput(jsonInput);
+    options['inputData'] = inputData
+    return (await quicktype(options)).lines.join("\n")
+  } else {
+    return ['选择数据源类型 ' + dataModelSourceType + ' 错误'].join("\n")
+  }
 }

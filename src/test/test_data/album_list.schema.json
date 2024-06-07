@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/JSONData",
+  "definitions": {
+      "JSONData": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "results": {
+                  "$ref": "#/definitions/Results"
+              }
+          },
+          "required": [
+              "results"
+          ],
+          "title": "JSONData"
+      },
+      "Results": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "opensearch:Query": {
+                  "$ref": "#/definitions/OpensearchQuery"
+              },
+              "opensearch:totalResults": {
+                  "type": "string",
+                  "format": "integer"
+              },
+              "opensearch:startIndex": {
+                  "type": "string",
+                  "format": "integer"
+              },
+              "opensearch:itemsPerPage": {
+                  "type": "string",
+                  "format": "integer"
+              },
+              "albummatches": {
+                  "$ref": "#/definitions/Albummatches"
+              },
+              "@attr": {
+                  "$ref": "#/definitions/Attr"
+              }
+          },
+          "required": [
+              "@attr",
+              "albummatches",
+              "opensearch:Query",
+              "opensearch:itemsPerPage",
+              "opensearch:startIndex",
+              "opensearch:totalResults"
+          ],
+          "title": "Results"
+      },
+      "Attr": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "for": {
+                  "type": "string"
+              }
+          },
+          "required": [
+              "for"
+          ],
+          "title": "Attr"
+      },
+      "Albummatches": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "album": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "#/definitions/Album"
+                  }
+              }
+          },
+          "required": [
+              "album"
+          ],
+          "title": "Albummatches"
+      },
+      "Album": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "name": {
+                  "type": "string"
+              },
+              "artist": {
+                  "type": "string"
+              },
+              "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "qt-uri-protocols": [
+                      "https"
+                  ],
+                  "qt-uri-extensions": [
+                      ".+frank",
+                      ".+frank+(2001+-+remaster)",
+                      ".+frank+(2001+remastered+version)",
+                      ".+jackson",
+                      ".+orville+peck)"
+                  ]
+              },
+              "image": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "#/definitions/Image"
+                  }
+              },
+              "streamable": {
+                  "type": "string",
+                  "format": "integer"
+              },
+              "mbid": {
+                  "type": "string"
+              }
+          },
+          "required": [
+              "artist",
+              "image",
+              "mbid",
+              "name",
+              "streamable",
+              "url"
+          ],
+          "title": "Album"
+      },
+      "Image": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "#text": {
+                  "type": "string",
+                  "format": "uri",
+                  "qt-uri-protocols": [
+                      "https"
+                  ],
+                  "qt-uri-extensions": [
+                      ".png"
+                  ]
+              },
+              "size": {
+                  "type": "string"
+              }
+          },
+          "required": [
+              "#text",
+              "size"
+          ],
+          "title": "Image"
+      },
+      "OpensearchQuery": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "#text": {
+                  "type": "string"
+              },
+              "role": {
+                  "type": "string"
+              },
+              "searchTerms": {
+                  "type": "string"
+              },
+              "startPage": {
+                  "type": "string",
+                  "format": "integer"
+              }
+          },
+          "required": [
+              "#text",
+              "role",
+              "searchTerms",
+              "startPage"
+          ],
+          "title": "OpensearchQuery"
+      }
+  }
+}
