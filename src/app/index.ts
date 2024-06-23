@@ -17,7 +17,7 @@ export default class extends Generator {
   extensionGenerator: any
   constructor(args, opts) {
     super(args, opts);
-    this.description = 'android脚手架生成器';
+    this.description = 'android脚手架生成器 1.0';
 
     // this.extensionConfig = Object.create(null);
     this.extensionConfig = tools.loadProjectInfoJson(this)
@@ -27,13 +27,13 @@ export default class extends Generator {
   }
 
   async initializing() {
-    this.log(yosay('android脚手架生成器'));
+    this.log(yosay('android脚手架生成器 1.0'));
   }
 
   async prompting() {
-    if (extensionGenerators.length === 1) {
-      this.extensionGenerator = extensionGenerators[0]
-    } else {
+    // if (extensionGenerators.length === 1) {
+    //   this.extensionGenerator = extensionGenerators[0].id
+    // } else {
       const choices: ChoiceOption[] = [];
       for (const g of extensionGenerators) {
         choices.push({ name: g.name, value: g.id })
@@ -48,7 +48,7 @@ export default class extends Generator {
       })).type;
 
       this.extensionGenerator = extensionGenerators.find(g => g.id === this.extensionConfig.type);
-    }
+    // }
     try {
       await this.extensionGenerator.prompting(this, this.extensionConfig);
     } catch (e) {

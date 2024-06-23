@@ -6,9 +6,15 @@ android {
     namespace = "<%= basePackageName %>.<%= librarys[idx].libraryName %>"
 }
 
+ksp {
+    arg("creator_base_package_name",  "<%= basePackageName %>")
+    arg("creator_module_package_name",  "<%= librarys[idx].libraryName %>")
+}
 dependencies {
-    api(projects.featureBase)
+    implementation(libs.creator)
+    ksp(libs.creator)
 
+    api(projects.featureBase)
     testImplementation(projects.libraryTestUtils)
     testImplementation(libs.bundles.test)
 

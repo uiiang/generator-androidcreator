@@ -43,6 +43,8 @@ spotless = "6.25.0"
 
 detekt = "1.23.6"
 androidGradlePlugin = "8.4.0"
+creator = "1.0"
+
 
 # Test versionsandroid-junit5-plugin-dsl
 
@@ -91,6 +93,7 @@ roomCompiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 accompanistFlowLayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanistFlowLayout" }
 detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 konsist = "com.lemonappdev:konsist:0.11.0"
+creator = { module = "uii.ang:creator", version.ref = "creator" }
 
 # Test dependencies
 junit = { module = "junit:junit", version.ref = "junit" }
