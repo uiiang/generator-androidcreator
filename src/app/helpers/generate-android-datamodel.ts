@@ -22,7 +22,8 @@ export default new class GeneratorAndroidDataModel {
       this.dataModelForLibrary = await prompts.askForDataModelForLibrary(generator, extensionConfig)
       this.dataModelPackageName = extensionConfig.basePackageName + '.' + this.dataModelForLibrary + '.domain.model'
       // await prompts.askForDataModelSourceType(generator, extensionConfig);
-      this.dataModelSourceFilePath = await prompts.askForDataModelSourcePath(generator);
+      // this.dataModelSourceFilePath = await prompts.askForDataModelSourcePath(generator);
+      this.dataModelSourceFilePath = await prompts.askForDataModelInfo(generator)
       // await prompts.askForDataModelPackageName(generator, extensionConfig);
       this.dataModelBaseClassName = await prompts.askForDataModelBaseClassName(generator);
     } catch (err) {

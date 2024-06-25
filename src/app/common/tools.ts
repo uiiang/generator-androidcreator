@@ -54,6 +54,10 @@ export function loadDirList(path: string, exclude: string[] = []) {
   })
 }
 
+export function mkdir(path: string){
+  fs.mkdirSync(path)
+}
+
 export function loadFileList(path: string, exclude: string[] = []) {
   // console.log('loadFileList scanPath',path)
   const files = fs.readdirSync(path);

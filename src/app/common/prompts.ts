@@ -140,6 +140,33 @@ export async function askForDataModelForLibrary(generator: yo, extensionConfig: 
   })).dataModelForLibrary
 }
 
+export async function askForDataModelInfo(generator: yo) {
+  const selectedType = await askForDataModelSourceFile(generator)
+  if (selectedType == 'input_path') {
+    return askForDataModelSourcePath(generator)
+  }
+  return selectedType
+}
+/**
+ * 选择生成datamodel数据源文件
+ */
+export async function askForDataModelSourceFile(generator: yo) {
+  const jsonDir = generator.destinationPath() + "/json"
+  var choices: ChoiceOption[] = [{ name: "输入文件路径", value: "input_path" }]
+  choices = choices.concat(tools.loadFileList(generator.templatePath(jsonDir), [])
+    .map(item => {
+      return { name: item, value: generator.destinationPath()+"/json/"+item }
+    }))
+  // choices.push({ name: "输入文件路径", value: "input" })
+  return (await generator.prompt({
+    type: 'list',
+    name: 'jsonFilePath',
+    message: '选择生成data model数据源文件路径',
+    pageSize: choices.length,
+    choices,
+  })).jsonFilePath
+}
+
 /**
  * 输入生成data model数据源文件路径
 * @param {Generator} generator

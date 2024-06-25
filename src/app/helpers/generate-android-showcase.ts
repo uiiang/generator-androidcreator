@@ -85,6 +85,10 @@ export default new class GeneratorAndroidShowcase {
         [{ source: 'gitignore', target: '.gitignore' },
         { source: 'gradle', target: 'gradle' },
         { source: 'buildSrc', target: 'buildSrc' },])
+      
+      var path = generator.destinationPath()+"/json"
+      generator.log('mkdir path=', path)
+      tools.mkdir(path)
       tools.saveProjectInfoJson(generator, extensionConfig)
     } else if (this.createType == 'createDatamodel') {
       androidDataModel.writing(generator)
