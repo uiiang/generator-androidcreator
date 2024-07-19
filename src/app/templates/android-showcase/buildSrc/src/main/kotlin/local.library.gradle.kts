@@ -20,7 +20,6 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
-    @Suppress("UnstableApiUsage")
     buildFeatures {
         viewBinding = true
         buildConfig = true

@@ -1,9 +1,17 @@
 plugins {
     id("local.library")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
     namespace = "<%= basePackageName %>.<%= librarys[idx].libraryName %>"
+    
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+        compose = true
+    }
+
 }
 
 ksp {

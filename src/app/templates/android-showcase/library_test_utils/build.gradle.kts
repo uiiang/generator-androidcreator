@@ -1,5 +1,6 @@
 plugins {
     id("local.library")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {

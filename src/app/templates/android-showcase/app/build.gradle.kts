@@ -3,6 +3,7 @@ import java.util.Locale
 
 plugins {
     id("local.app")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -34,7 +35,8 @@ android {
         }
 
         buildConfigFieldFromGradleProperty("apiBaseUrl")
-        // buildConfigFieldFromGradleProperty("apiToken")
+        buildConfigFieldFromGradleProperty("appId")
+        buildConfigFieldFromGradleProperty("appSecret")
     }
 
     buildTypes {
@@ -44,7 +46,6 @@ android {
         }
     }
 
-    @Suppress("UnstableApiUsage")
     buildFeatures {
         viewBinding = true
         buildConfig = true

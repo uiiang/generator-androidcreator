@@ -15,11 +15,12 @@ import retrofit2.Retrofit
 import timber.log.Timber
 
 val appModule = module {
-
+    // APP授权认证
     // single { AuthenticationInterceptor(BuildConfig.GRADLE_API_TOKEN) }
 
     singleOf(::UserAgentInterceptor)
 
+    // single 用于注入单例对象
     single {
         HttpLoggingInterceptor { message ->
             Timber.d("Http: $message")
@@ -27,7 +28,8 @@ val appModule = module {
             level = HttpLoggingInterceptor.Level.BODY
         }
     }
-
+    
+    // single 用于注入单例对象
     single {
         OkHttpClient.Builder()
             .addInterceptor(get<HttpLoggingInterceptor>())
@@ -35,7 +37,8 @@ val appModule = module {
             .addInterceptor(get<UserAgentInterceptor>())
             .build()
     }
-
+    
+    // single 用于注入单例对象
     single {
         val contentType = "application/json".toMediaType()
 

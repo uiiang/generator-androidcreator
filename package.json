@@ -12,7 +12,7 @@
     "node": ">=16"
   },
   "scripts": {
-    "copy": "copyfiles \"src/app/templates/**/*\" -u 2 generators/app && copyfiles \"src/app/config/**/projectProperties.json*\" -u 3 generators/test",
+    "copy": "copyfiles \"src/app/templates/**/*\" -u 2 -a true generators/app && copyfiles \"src/app/config/**/projectProperties.json*\" -u 3 generators/test",
     "lint": "eslint --ext .ts src",
     "tsc": "tsc -p tsconfig.json",
     "tsc-watch": "tsc -p tsconfig.json -w",
