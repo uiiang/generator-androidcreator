@@ -68,7 +68,7 @@ export default new class GeneratorAndroidShowcase {
       const librarys = extensionConfig.librarys
       generator.log('开始生成自定义library，共', librarys.length, '个')
       // console.log('librarys ', extensionConfig.librarys[0])
-      this.genCustomLibrary(generator, extensionConfig,sourcePackageDir,packageDir)
+      this.genCustomLibrary(generator, extensionConfig, sourcePackageDir, packageDir)
 
       generator.log('开始生成library单元测试库')
       // library单元测试库
@@ -78,22 +78,22 @@ export default new class GeneratorAndroidShowcase {
       tools.copyTplLibrary(generator, extensionConfig, 'library_test_utils', 'library_test_utils',
         sourcePackageDir,
         packageDir, [])
-        generator.log('开始生成工程根目录下的文件')
+      generator.log('开始生成工程根目录下的文件')
       // 工程根目录下的文件
       tools.copyTplFileList(generator, extensionConfig, '', '', ['gitignore'])
       tools.copyTpls(generator, extensionConfig,
         [{ source: 'gitignore', target: '.gitignore' },
         { source: 'gradle', target: 'gradle' },
         { source: 'buildSrc', target: 'buildSrc' },])
-      
-      var path = generator.destinationPath()+"/json"
+
+      var path = generator.destinationPath() + "/json"
       tools.mkdir(path)
-      
+
       tools.saveProjectInfoJson(generator, extensionConfig)
     } else if (this.createType == 'createDatamodel') {
       androidDataModel.writing(generator)
     } else if (this.createType == 'createLibrary') {
-      this.genCustomLibrary(generator, extensionConfig,sourcePackageDir,packageDir)
+      this.genCustomLibrary(generator, extensionConfig, sourcePackageDir, packageDir)
       extensionConfig.librarys = extensionConfig.librarys.concat(this.librarys)
       // console.log('extensionConfig.librarys', extensionConfig.librarys)
       tools.saveProjectInfoJson(generator, extensionConfig)
@@ -102,19 +102,22 @@ export default new class GeneratorAndroidShowcase {
 
   genCustomLibrary(generator: yo, extensionConfig: ExtensionConfig,
     sourcePackageDir: string, packageDir: string) {
+      extensionConfig.librarys = this.librarys
     for (var i = 0; i < this.librarys.length; i++) {
       const lib = this.librarys[i]
       extensionConfig.idx = i
       var feature_libraryName = "feature_" + lib.libraryName
       tools.copyTplLibrary(generator,
         extensionConfig, 'feature_empty',
-        feature_libraryName,
-        sourcePackageDir + '/empty',
+        feature_libraryName, sourcePackageDir + '/empty',
         packageDir + '/' + lib.libraryName, ['Empty.kt'],
         [{ source: '/empty/', target: '/' + lib.libraryName + '/' },
         { source: 'empty', target: lib.libraryName },
         { source: 'Empty', target: lib.libraryNameCU },
-        { source: 'feature_empty_nav_graph.xml', target: 'feature_' + lib.libraryName + '_nav_graph.xml' }])
+        {
+          source: 'feature_empty_nav_graph.xml',
+          target: 'feature_' + lib.libraryName + '_nav_graph.xml'
+        }])
     }
   }
 

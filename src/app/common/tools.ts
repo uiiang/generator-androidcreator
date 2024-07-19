@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import yo from 'yeoman-generator';
-import { ExtensionConfig, Replace } from './extension_config.js';
+import { ExtensionConfig, Replace, LibraryObj } from './extension_config.js';
 import Type from 'type-of-is'
 import {
   quicktype,
@@ -79,16 +79,16 @@ export function getAllFile(scanPath: string) {
   let res: string[] = []
   function traverse(scanPath: string) {
     fs.readdirSync(scanPath).forEach((file) => {
-      console.log('scanPath ',file)
+      console.log('scanPath ', file)
       const pathname = path.join(scanPath, file)
       if (fs.statSync(pathname).isDirectory()) {
         let currDir = fs.readdirSync(pathname)
-        console.log(file+' 是否空文件夹', currDir.length)
-        if (fs.readdirSync(pathname).length<1) {
-        res.push(convertPath(pathname).replace(convertPath(baseDir), ''))
+        console.log(file + ' 是否空文件夹', currDir.length)
+        if (fs.readdirSync(pathname).length < 1) {
+          res.push(convertPath(pathname).replace(convertPath(baseDir), ''))
         }
         traverse(pathname)
-      
+
       } else {
         // console.log('getAllFile scanPath',convertPath(baseDir))
         // console.log('getAllFile replace',convertPath(pathname))
@@ -175,7 +175,7 @@ export function copyTplLibrary(generator: yo,
   extensionConfig: ExtensionConfig, scanPath: string,
   destinationPath: string, sourcePackageDir: string, targetPackageDir: string,
   exclude: string[] = [], replace: Replace[] = []) {
-  generator.log('开始生成library', destinationPath)
+  generator.log('开始生成library', destinationPath, extensionConfig)
   // generator.log('targetPackageDir', targetPackageDir)
   const destPath = destinationPath.length > 0 ? destinationPath + '/' : '/'
   const sourcePath = scanPath.length > 0 ? scanPath + '/' : '/'
