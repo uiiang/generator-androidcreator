@@ -214,7 +214,8 @@ export async function loadDataModelSource(dataModelFilePath: string,
     inferUuids: false,
     rendererOptions: {
       "framework": 'kotlinx',
-      'package': dataModelPackageName
+      'package': dataModelPackageName,
+      // 'allPropertiesOptional':true
     },
     outputFilename: dataModelBaseClassName + '.kt'
   }
@@ -228,6 +229,7 @@ export async function loadDataModelSource(dataModelFilePath: string,
   const inputData = new InputData();
   inputData.addInput(jsonInput);
   options['inputData'] = inputData
+  options['allPropertiesOptional'] = true
   return (await quicktype(options)).lines.join("\n")
 }
 
