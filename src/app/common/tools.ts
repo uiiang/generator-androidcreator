@@ -213,7 +213,7 @@ export async function loadDataModelSource(dataModelFilePath: string,
     inferMaps: false,
     inferUuids: false,
     rendererOptions: {
-      "framework": 'just-types',
+      "framework": 'kotlinx',
       'package': dataModelPackageName
     },
     outputFilename: dataModelBaseClassName + '.kt'
