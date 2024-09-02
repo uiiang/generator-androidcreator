@@ -1,0 +1,89 @@
+{
+  "code": 200,
+  "message": "请求成功",
+  "results": {
+    "is_lock": false,
+    "is_login": false,
+    "is_mobile_bind": false,
+    "is_vip": false,
+    "comic": {
+      "uuid": "ff6c6574-523b-11e9-bc73-00163e0ca5bd",
+      "b_404": false,
+      "b_hidden": false,
+      "ban": 0,
+      "name": "間諜過家家",
+      "alias": "間諜過家家,间谍过家家",
+      "path_word": "jiandieguojiajia",
+      "close_comment": false,
+      "close_roast": true,
+      "free_type": {
+        "display": "免費",
+        "value": 1
+      },
+      "restrict": {
+        "value": 0,
+        "display": "一般向(免費)"
+      },
+      "reclass": {
+        "value": 1,
+        "display": "漫畫Manga"
+      },
+      "females": [],
+      "males": [],
+      "clubs": [],
+      "img_type": 2,
+      "seo_baidu": "間諜過家家",
+      "region": {
+        "value": 0,
+        "display": "日本"
+      },
+      "status": {
+        "value": 0,
+        "display": "連載中"
+      },
+      "author": [
+        {
+          "name": "远藤达哉",
+          "path_word": "yuantengdazhai"
+        }
+      ],
+      "theme": [
+        {
+          "name": "歡樂向",
+          "path_word": "huanlexiang"
+        },
+        {
+          "name": "治愈",
+          "path_word": "zhiyu"
+        }
+      ],
+      "parodies": [],
+      "brief": "技藝高超的間諜<黃昏>，為了更加美好的世界,每天從事著諜報任務。有一天，司令下達了新的難題——…。為了完成任務，所臨時組建的家庭，所展開的新生活，但是！？間諜×打鬥×與眾不同的家族喜劇現在開始！！萌即正義！",
+      "datetime_updated": "2024-08-19",
+      "cover": "https://hi77-overseas.mangafunb.fun/jiandieguojiajia/cover/1655269721.jpg.328x422.jpg",
+      "last_chapter": {
+        "uuid": "17175aee-5dda-11ef-aa3f-3f487b7d9a9a",
+        "name": "第103话"
+      },
+      "popular": 20884677
+    },
+    "popular": 20884677,
+    "groups": {
+      "default": {
+        "path_word": "default",
+        "count": 132,
+        "name": "默認"
+      },
+      "tankobon": {
+        "path_word": "tankobon",
+        "count": 10,
+        "name": "单行本"
+      },
+      "other_group": {
+        "path_word": "other_group",
+        "count": 8,
+        "name": "其他系列"
+      }
+    }
+  }
+}

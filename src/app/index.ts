@@ -6,9 +6,10 @@ import { ChoiceOption, ExtensionConfig } from './common/extension_config.js'
 
 import * as tools from './common/tools.js';
 import androidShowcase from './helpers/generate-android-showcase.js'
+import androidKtorKoin from './helpers/generate-android-android-ktor-koin.js'
 
 const extensionGenerators = [
-  androidShowcase
+  androidShowcase, androidKtorKoin
 ]
 
 export default class extends Generator {

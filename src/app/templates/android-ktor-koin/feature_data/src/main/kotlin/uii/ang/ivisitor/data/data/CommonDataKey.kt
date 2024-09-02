@@ -1,0 +1,8 @@
+package <%= basePackageName %>.data.data
+
+
+object CommonConst {
+    const val COMMON_DATA_KEY_LANGUAGE = "COMMON_DATA_KEY_LANGUAGE"
+    const val COMMON_DATA_KEY_SERVER_URL = "COMMON_DATA_KEY_SERVER_URL"
+    const val COMMON_DATA_KEY_SERVER_PROTOCOL = "COMMON_DATA_KEY_SERVER_PROTOCOL"
+}
