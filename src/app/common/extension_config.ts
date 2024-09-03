@@ -13,6 +13,11 @@ export interface ExtensionConfig {
   // dataModelBaseClassName: string,
   // dataModelSource: string,
   // dataModelPackageName: string
+
+  presentationForLibrary:string,
+  presentationBaseClassName:string,
+  presentationBaseClassNameCU:string,
+  presentationPackageName:string,
 }
 export interface LibraryObj {
   // order: number,

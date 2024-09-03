@@ -15,7 +15,8 @@ export async function askForWhatYouDo(generator: yo) {
   const dataSourceType = [
     { name: "create new project", value: "createProject" },
     { name: "create new library", value: "createLibrary" },
-    { name: "create new data model", value: "createDatamodel" }
+    { name: "create new data model", value: "createDatamodel" },
+    { name: "create new presentation", value: "createPresentation" }
   ]
   const choices: ChoiceOption[] = [];
   for (const g of dataSourceType) {
@@ -140,6 +141,23 @@ export async function askForDataModelForLibrary(generator: yo, extensionConfig: 
   })).dataModelForLibrary
 }
 
+
+//选择生成presentation到哪个library
+export async function askForPresentationForLibrary(generator: yo, extensionConfig: ExtensionConfig) {
+  const librarys = extensionConfig.librarys
+  const choices: ChoiceOption[] = [];
+  for (const g of librarys) {
+    choices.push({ name: g.libraryName, value: g.libraryName })
+  }
+  return (await generator.prompt({
+    type: 'list',
+    name: 'presentationForLibrary',
+    message: '选择生成presentation到哪个library?',
+    pageSize: choices.length,
+    choices,
+  })).presentationForLibrary
+}
+
 export async function askForDataModelInfo(generator: yo) {
   const selectedType = await askForDataModelSourceFile(generator)
   if (selectedType == 'input_path') {
@@ -210,4 +228,21 @@ export async function askForDataModelPackageName(generator: yo, extensionConfig:
     default: def || '',
     // validate: validator.validateExtensionId
   })).dataModelPackageName
+}
+
+
+/**
+ * 输入生成presentation的基础类名
+ * 
+ * 将根据基础类名生成Event, Screen, ViewModel
+* @param {Generator} generator
+*/
+export async function askForPresentationBaseClassName(generator: yo) {
+  return (await generator.prompt({
+    type: 'input',
+    name: 'presentationBaseClassName',
+    message: '输入生成presentation的基础类名',
+    store: true,
+    // validate: validator.validateExtensionId
+  })).presentationBaseClassName
 }

@@ -150,8 +150,8 @@ export function copyTplFileList(generator: yo, extensionConfig: ExtensionConfig,
   // generator.log('==============================')
 }
 
-export function copyTplDir(generator: yo, extensionConfig: ExtensionConfig, scanPath: string
-  , destinationPath: string,
+export function copyTplDir(generator: yo, extensionConfig: ExtensionConfig
+  , scanPath: string, destinationPath: string,
   exclude: string[] = []) {
   const destPath = destinationPath.length > 0 ? destinationPath + '/' : ''
   const sourcePath = scanPath.length > 0 ? scanPath + '/' : ''

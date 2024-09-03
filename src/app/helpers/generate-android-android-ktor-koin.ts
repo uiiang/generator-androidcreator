@@ -4,6 +4,7 @@ import * as prompts from '../common/prompts.js'
 import * as tools from '../common/tools.js';
 import { ExtensionConfig, LibraryObj } from '../common/extension_config.js'
 import androidDataModel from './generate-android-datamodel.js'
+import androidPresentation from './generate-android-presentation.js'
 
 const chalk = new Chalk();
 
@@ -35,6 +36,8 @@ export default new class GeneratorAndroidKtorKoin {
         this.librarys = await prompts.askForLibraryInfo(generator)
       } else if (this.createType == 'createDatamodel') {
         await androidDataModel.prompting(generator, extensionConfig)
+      } else if (this.createType == 'createPresentation') {
+        await androidPresentation.prompting(generator, extensionConfig)
       }
     } catch (err) {
       generator.log(err)
@@ -102,6 +105,8 @@ export default new class GeneratorAndroidKtorKoin {
       extensionConfig.librarys = extensionConfig.librarys.concat(this.librarys)
       // console.log('extensionConfig.librarys', extensionConfig.librarys)
       tools.saveProjectInfoJson(generator, extensionConfig)
+    } else if (this.createType == 'createPresentation') {
+      androidPresentation.genPresentation(generator, extensionConfig)
     }
   }
 

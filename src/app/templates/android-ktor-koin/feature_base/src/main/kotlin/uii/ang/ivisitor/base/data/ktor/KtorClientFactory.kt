@@ -48,6 +48,11 @@ object KtorClientFactory {
         }
         install(ContentNegotiation) {
           json(
+            // 有时服务端返回的json数据，是放在contentType:text/html中或javascript文件中
+            // 需要此语句兼容各种返回类型的json
+            contentType = ContentType.Any
+          )
+          json(
             Json {
               prettyPrint = true
               isLenient = true
